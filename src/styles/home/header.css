@@ -37,6 +37,10 @@ nav {
     display: flex;
 }
 
+nav div {
+    display: none;
+}
+
 nav ul {
     list-style: none;
     margin: 0;

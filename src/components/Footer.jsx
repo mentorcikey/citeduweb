@@ -11,51 +11,49 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 
-
-
 const Footer = () => {
     return (
-        <footer class="footer-section">
-            <div class="header-container">
-                <div class="footer-cta">
+        <footer className="footer-section">
+            <div className="header-container">
+                <div className="xfooter-cta">
 
-                    <div class="single-cta">
+                    <div className="single-cta">
                         <IoLocationSharp />
-                        <div class="cta-text">
+                        <div className="cta-text">
                             <h4>Trụ sở</h4>
                             <span>Số 18, KTT nhà hát chèo Việt Nam, 169 Doãn Kế Thiện, Mai Dịch, Cầu Giấy, Hà Nội
                             </span>
                         </div>
                     </div>
 
-                    <div class="single-cta">
+                    <div className="single-cta">
                         <FaPhoneAlt />
-                        <div class="cta-text">
+                        <div className="cta-text">
                             <h4>Liên hệ tư vấn</h4>
                             <span>0329621710</span>
                         </div>
                     </div>
 
-                    <div class="single-cta">
+                    <div className="single-cta">
                         <MdEmail />
-                        <div class="cta-text">
+                        <div className="cta-text">
                             <h4>Email liên hệ</h4>
                             <span>contact.citedu@gmail.com</span>
                         </div>
                     </div>
 
                 </div>
-                <div class="footer-content">
+                <div className="footer-content">
 
-                    <div class="footer-widget">
-                        <div class="footer-logo">
+                    <div className="footer-widget">
+                        <div className="footer-logo">
                             <img src={Logo} alt="logo" />
                         </div>
-                        <div class="footer-text">
+                        <div className="footer-text">
                             <p>Với sứ mệnh mang đến những nguồn kiến thức chuẩn chỉnh, bài bản, chất lượng để chắp cánh cho khát vọng, tương lai của các bạn trẻ học sinh, sinh viên Việt Nam trong ngành CNTT chúng tôi cam kết rằng sẽ mang đến những khoá học chất lượng với học phí phải chăng để bất kì đối tượng nào cũng có thể tham gia và tiếp cận với ngành CNTT
                             </p>
                         </div>
-                        <div class="footer-social-icon">
+                        <div className="footer-social-icon">
                             <span>Theo dõi chúng tôi</span>
                             <div>
                                 <a href="#"><img src={FacebookIcon} alt="FacebookIcon" /></a>
@@ -65,8 +63,8 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
+                    <div className="footer-widget">
+                        <div className="footer-widget-heading">
                             <h3>Về CIT Education</h3>
                         </div>
                         <ul>
@@ -87,14 +85,14 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
+                    <div className="footer-widget">
+                        <div className="footer-widget-heading">
                             <h3>Nhận thông báo về khoá học</h3>
                         </div>
-                        <div class="footer-text">
+                        <div className="footer-text">
                             <p>Đăng kí email của bạn để nhận được thông báo sớm nhất về các chương trình đào tạo của chúng tôi</p>
                         </div>
-                        <div class="subscribe-form">
+                        <div className="subscribe-form">
                             <form action="#">
                                 <input type="text" placeholder="Email Address" />
                                 <button><FaTelegramPlane /></button>
@@ -104,11 +102,11 @@ const Footer = () => {
 
                 </div>
             </div>
-            <div class="copyright-area">
-                <div class="copyright-text">
+            <div className="copyright-area">
+                <div className="copyright-text">
                     <p>Copyright &copy; 2023, All Right Reserved <a href="">CIT Education</a></p>
                 </div>
-                <div class="footer-menu">
+                <div className="footer-menu">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Terms</a></li>
