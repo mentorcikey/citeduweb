@@ -6,6 +6,15 @@ import 'slick-carousel/slick/slick-theme.css';
 import '../../styles/home/feedbackSlider.css';
 import Student1 from "../../assets/images/student1.png"
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import required modules
+import { Pagination } from 'swiper/modules';
+
 const feedbacks = [
     {
         school: 'Sinh viên Đại học Công Nghệ - Đại học Quốc Gia',
@@ -58,21 +67,27 @@ const FeedbackSlider = () => {
 
     return (
         <div className='feedbackContainer'>
-            <h1>Đánh giá mới nhất từ học viên</h1>
-            <Slider {...settings}>
-                {feedbacks.map((feedback, index) => (
-                    <div key={index} className="feedback-slide">
-                        <div className="feedback-info">
-                            <h3>{feedback.school}</h3>
-                            <p>{feedback.content}</p>
-                        </div>
-                        <div className="feedback-image">
-                            <img src={feedback.image} alt={`Học viên ${index + 1}`} />
-                            <p className="student-name">{feedback.name}</p>
-                        </div>
+            <h2>Đánh giá mới nhất từ học viên</h2>
+            <Swiper
+                slidesPerView={'auto'}
+                spaceBetween={30}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Pagination]}
+                className="mySwiper"
+            > {feedbacks.map((feedback, index) => (
+                <SwiperSlide key={index} className="feedback-slide">
+                    <div className="feedback-info">
+                        <h3>{feedback.school}</h3>
+                        <p>{feedback.content}</p>
                     </div>
-                ))}
-            </Slider>
+                    <div className="feedback-image">
+                        <img src={feedback.image} alt={`Học viên ${index + 1}`} />
+                        <p className="student-name">{feedback.name}</p>
+                    </div>
+                </SwiperSlide>
+            ))}</Swiper>
         </div>
     );
 };
