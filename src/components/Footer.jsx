@@ -56,9 +56,9 @@ const Footer = () => {
                         <div className="footer-social-icon">
                             <span>Theo dõi chúng tôi</span>
                             <div>
-                                <a href="#"><img src={FacebookIcon} alt="FacebookIcon" /></a>
-                                <a href="#"><img src={TiktokIcon} alt="TiktokIcon" /></a>
-                                <a href="#"><img src={YoutubeIcon} alt="YoutubeIcon" /></a>
+                                <a href="#home"><img src={FacebookIcon} alt="FacebookIcon" /></a>
+                                <a href="#home"><img src={TiktokIcon} alt="TiktokIcon" /></a>
+                                <a href="#home"><img src={YoutubeIcon} alt="YoutubeIcon" /></a>
                             </div>
                         </div>
                     </div>
@@ -69,18 +69,18 @@ const Footer = () => {
                         </div>
                         <ul>
                             <div>
-                                <li><a href="#">Trang trủ</a></li>
-                                <li><a href="#">Về chúng tôi</a></li>
-                                <li><a href="#">Khoá học</a></li>
-                                <li><a href="#">Feedback học viên</a></li>
-                                <li><a href="#">Liên hệ</a></li>
+                                <li><a href="#home">Trang trủ</a></li>
+                                <li><a href="#home">Về chúng tôi</a></li>
+                                <li><a href="#home">Khoá học</a></li>
+                                <li><a href="#home">Feedback học viên</a></li>
+                                <li><a href="#home">Liên hệ</a></li>
                             </div>
                             <div>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Expert Team</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Latest News</a></li>
+                                <li><a href="#home">About us</a></li>
+                                <li><a href="#home">Our Services</a></li>
+                                <li><a href="#home">Expert Team</a></li>
+                                <li><a href="#home">Contact us</a></li>
+                                <li><a href="#home">Latest News</a></li>
                             </div>
                         </ul>
                     </div>
@@ -93,7 +93,7 @@ const Footer = () => {
                             <p>Đăng kí email của bạn để nhận được thông báo sớm nhất về các chương trình đào tạo của chúng tôi</p>
                         </div>
                         <div className="subscribe-form">
-                            <form action="#">
+                            <form action="#home">
                                 <input type="text" placeholder="Email Address" />
                                 <button><FaTelegramPlane /></button>
                             </form>
@@ -104,15 +104,15 @@ const Footer = () => {
             </div>
             <div className="copyright-area">
                 <div className="copyright-text">
-                    <p>Copyright &copy; 2023, All Right Reserved <a href="">CIT Education</a></p>
+                    <p>Copyright &copy; 2023, All Right Reserved <a href="#home">CIT Education</a></p>
                 </div>
                 <div className="footer-menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Policy</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home">Terms</a></li>
+                        <li><a href="#home">Privacy</a></li>
+                        <li><a href="#home">Policy</a></li>
+                        <li><a href="#home">Contact</a></li>
                     </ul>
                 </div>
             </div>
