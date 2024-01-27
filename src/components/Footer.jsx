@@ -15,7 +15,7 @@ const Footer = () => {
     return (
         <footer className="footer-section">
             <div className="header-container">
-                <div className="xfooter-cta">
+                <div className="footer-cta">
 
                     <div className="single-cta">
                         <IoLocationSharp />

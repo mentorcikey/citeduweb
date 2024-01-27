@@ -18,7 +18,8 @@
 .consultation-form-title h3 {
     max-width: 100%;
     color: #fff;
-    font-size: 2vw;
+    font-size: 25px;
+    width: 100%;
     font-weight: 700;
 }
 
@@ -26,7 +27,9 @@
     color: #fff;
     margin-top: 20px;
     max-width: 100%;
-    font-size: 1vw;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .consultation-form-title img {
@@ -103,4 +106,35 @@
     100% {
         transform: scale(1.1);
     }
+}
+
+@media screen and (max-width: 1024px) {
+    .consultation-form-content {
+        flex-direction: column;
+    }
+
+    .consultation-form-title {
+        width: 100%;
+    }
+
+    .consultation-form-title img {
+        display: none;
+    }
+
+    .consultation-form {
+        width: 100%;
+    }
+
+    .consultation-form-item {
+        flex-direction: column;
+    }
+
+    .consultation-form-item .form-group {
+        width: 100%;
+    }
+
+    .consultation-form-item .form-group:nth-child(2) {
+        margin-top: 30px;
+    }
+
 }

@@ -15,18 +15,22 @@ function Participants() {
             </p>
             <div className="target-groups">
                 <div className="target-item">
-                    <h3>Bạn muốn được đào tạo? </h3>
-                    <p>Bạn là người mới bắt đầu hoặc mong muốn được đào tạo về những kỹ năng, công nghệ mới.</p>
+                    <div>
+                        <h3>Bạn muốn được đào tạo? </h3>
+                        <p>Bạn là người mới bắt đầu hoặc mong muốn được đào tạo về những kỹ năng, công nghệ mới.</p>
+                    </div>
                     <img src={Participants1} alt="Participants1" />
                 </div>
                 <div className="target-item">
-                    <h3>Bạn muốn được thực tập? </h3>
-                    <p>Bạn đang tìm kiếm cơ hội thực tập với những trải nghiệm thực tế, giúp nâng cao kỹ năng chuyên môn & kỹ năng mềm, làm quen với môi trường và văn hóa doanh nghiệp.</p>
+                    <div>
+                        <h3>Bạn muốn được thực tập? </h3>
+                        <p>Bạn đang tìm kiếm cơ hội thực tập với những trải nghiệm thực tế, giúp nâng cao kỹ năng chuyên môn & kỹ năng mềm, làm quen với môi trường và văn hóa doanh nghiệp.</p>
+                    </div>
                     <img src={Participants2} alt="Participants2" />
                 </div>
                 <div className="target-item">
-                    <h3>Bạn muốn tìm cơ hội việc làm?</h3>
-                    <p>Bạn đã và đang theo đuổi ngành Công nghệ, muốn thử sức với vị trí Fresher hoặc làm việc tại dự án.</p>
+                    <div>                    <h3>Bạn muốn tìm cơ hội việc làm?</h3>
+                        <p>Bạn đã và đang theo đuổi ngành Công nghệ, muốn thử sức với vị trí Fresher hoặc làm việc tại dự án.</p></div>
                     <img src={Participants3} alt="Job Participants3" />
                 </div>
             </div>
