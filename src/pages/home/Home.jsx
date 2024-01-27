@@ -7,16 +7,18 @@ import ConsultationForm from '../../components/home/ConsultationForm'
 import TeacherTeam from '../../components/home/TeacherTeam'
 import TrendingTechnology from '../../components/home/TrendingTechnology'
 import LatestCourse from "../../components/home/LatestCourse"
+import TrainingPhilosophy from "../../components/home/TrainingPhilosophy"
 
 function Home() {
     return (
         <>
             <CourseSlider />
             <TrendingTechnology />
-            <Participants />
-            <LatestCourse />
-            <TeacherTeam />
             <FeedbackSlider />
+            <Participants />
+            <TrainingPhilosophy />
+            <TeacherTeam />
+            <LatestCourse />
             <ConsultationForm />
         </>
     )

@@ -1,0 +1,41 @@
+.trainingPhilosophy-container {
+    padding: 0 5vw;
+    margin-top: 50px;
+    height: 450px;
+}
+
+.trainingPhilosophy-container h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.trainingPhilosophy-container .trainingPhilosophy-content {
+    display: flex;
+}
+
+.trainingPhilosophy-container .trainingPhilosophy-image {
+    flex: 1;
+}
+
+.trainingPhilosophy-container .trainingPhilosophy-image img {
+    width: 80%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.trainingPhilosophy-container .trainingPhilosophy-accordion {
+    flex: 1;
+}
+
+.MuiPaper-root {
+    box-shadow: none !important;
+}
+
+.MuiAccordionSummary-content {
+    font-size: 20px;
+    font-weight: 500;
+
+}
