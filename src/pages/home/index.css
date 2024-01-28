@@ -1,0 +1,11 @@
+.phone-icon {
+    position: fixed;
+    right: 20px;
+    bottom: 20%;
+    font-size: 20px;
+    padding: 20px;
+    z-index: 9999;
+    border-radius: 50%;
+    background-color: #1F409A;
+    color: aqua;
+}

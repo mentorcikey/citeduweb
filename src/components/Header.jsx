@@ -3,7 +3,6 @@ import { FaBars } from 'react-icons/fa';
 import { IoClose } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
-import { FaPhone } from 'react-icons/fa';
 
 import FacebookIcon from "../assets/images/icons8-facebook-48.png"
 import TiktokIcon from "../assets/images/icons8-tiktok-50.png"
@@ -58,16 +57,9 @@ const Header = () => {
         };
     }, []);
 
-    const handleIconClick = () => {
-        window.location.href = `tel:${+84345298170}`;
-    };
-
     return (
         <>
             <header className={`header ${isHeaderSticky ? 'header-sticky active' : ''}`}>
-                <div className="phone-icon" onClick={handleIconClick}>
-                    <FaPhone />
-                </div>
                 <div className="header-logo">
                     <Link to="/">  <img src={LogoCITEducation} alt="logoCITEducation" /></Link>
                 </div>
