@@ -50,10 +50,6 @@
     background-color: #1F409A;
 }
 
-.course-image {
-    overflow: hidden;
-}
-
 .course-image img {
     width: 100%;
     height: auto;

@@ -6,14 +6,21 @@
 .latestCourse-container h1 {
     font-size: 32px;
     font-weight: 600;
-    color: #000;
+    color: #1F409A;
+}
+
+.latestCourse-container .slick-track {
+    display: flex;
+    gap: 20px;
+    height: auto;
+    margin-top: 20px;
 }
 
 .latestCourse-container .latestCourse-slider .latestCourse-slide {
     background-color: #98d7ec;
     border-radius: 10px;
-    margin-top: 20px;
-    cursor: pointer;
+    margin-right: 20px;
+    height: 420px;
 }
 
 .latestCourse-container .latestCourse-slider .latestCourse-slide .latestCourse-slide-img {
@@ -43,7 +50,7 @@
 
 .latestCourse-container .latestCourse-slider .latestCourse-slide h1 {
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 500;
     margin: 20px;
 }
 
@@ -87,16 +94,19 @@
     margin-left: 6px;
 }
 
-.latestCourse-container ntainer .slick-arrow::after,
+.latestCourse-container .slick-arrow::after,
 .latestCourse-container .slick-arrow::before {
     color: #1F409A;
 }
 
 @media screen and (max-width: 768px) {
 
-    .latestCourse-container ntainer .slick-arrow::after,
+    .latestCourse-container .slick-arrow::after,
     .latestCourse-container .slick-arrow::before {
         display: none;
     }
 
+    .latestCourse-container .slick-track {
+        gap: 0;
+    }
 }

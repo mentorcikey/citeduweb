@@ -6,7 +6,24 @@ import { FaBookOpen } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 
-import Banner from "../../assets/images/banner.png"
+import CourseImage from "../../assets/images/banner.png"
+
+const lastestCourses = [
+    {
+        nameCourse: 'Khoá học lập trình Web FullStack',
+        imageUrl: CourseImage,
+    },
+    {
+        nameCourse: 'Khoá học lập trình Web Front-end',
+        imageUrl: CourseImage,
+    }, {
+        nameCourse: 'Khoá học lập trình Web Back-end',
+        imageUrl: CourseImage,
+    }, {
+        nameCourse: 'Khoá học lập trình Web',
+        imageUrl: CourseImage,
+    },
+];
 
 function LatestCourse() {
     const settings = {
@@ -14,7 +31,8 @@ function LatestCourse() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        speed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -47,82 +65,29 @@ function LatestCourse() {
         <div className='latestCourse-container'>
             <h1>Những khoá học mới nhất</h1>
             <Slider {...settings} className='latestCourse-slider'>
-                <div className='latestCourse-slide'>
-                    <div className='latestCourse-slide-img'>
-                        <img src={Banner} alt="Banner" />
-                    </div>
-                    <h1>Khoá học lập trình Web FullStack</h1>
-                    <div className='latestCourse-slide-content'>
-                        <button><span>Xem chi tiết </span><FaArrowRightToBracket /></button>
-                        <div className='latestCourse-slide-courseInfo'>
-                            <div>
-                                <FaBookOpen />
-                                <p>93 Bài học</p>
+                {
+                    lastestCourses.map((item, index) => (
+                        <div key={index} className='latestCourse-slide'>
+                            <div className='latestCourse-slide-img'>
+                                <img src={item.imageUrl} alt="Banner" />
                             </div>
-                            <div>
-                                <IoMdTime />
-                                <p>192 giờ</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='latestCourse-slide'>
-                    <div className='latestCourse-slide-img'>
-                        <img src={Banner} alt="Banner" />
-                    </div>
-                    <h1>Khoá học lập trình Web Font-end</h1>
-                    <div className='latestCourse-slide-content'>
-                        <button><span>Xem chi tiết </span><FaArrowRightToBracket /></button>
-                        <div className='latestCourse-slide-courseInfo'>
-                            <div>
-                                <FaBookOpen />
-                                <p>93 Bài học</p>
-                            </div>
-                            <div>
-                                <IoMdTime />
-                                <p>192 giờ</p>
+                            <h1>{item.nameCourse}</h1>
+                            <div className='latestCourse-slide-content'>
+                                <button><span>Xem chi tiết </span><FaArrowRightToBracket /></button>
+                                <div className='latestCourse-slide-courseInfo'>
+                                    <div>
+                                        <FaBookOpen />
+                                        <p>93 Bài học</p>
+                                    </div>
+                                    <div>
+                                        <IoMdTime />
+                                        <p>192 giờ</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className='latestCourse-slide'>
-                    <div className='latestCourse-slide-img'>
-                        <img src={Banner} alt="Banner" />
-                    </div>
-                    <h1>Khoá học lập trình Web Font-end</h1>
-                    <div className='latestCourse-slide-content'>
-                        <button><span>Xem chi tiết </span><FaArrowRightToBracket /></button>
-                        <div className='latestCourse-slide-courseInfo'>
-                            <div>
-                                <FaBookOpen />
-                                <p>93 Bài học</p>
-                            </div>
-                            <div>
-                                <IoMdTime />
-                                <p>192 giờ</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='latestCourse-slide'>
-                    <div className='latestCourse-slide-img'>
-                        <img src={Banner} alt="Banner" />
-                    </div>
-                    <h1>Khoá học lập trình Web Back-end</h1>
-                    <div className='latestCourse-slide-content'>
-                        <button><span>Xem chi tiết </span><FaArrowRightToBracket /></button>
-                        <div className='latestCourse-slide-courseInfo'>
-                            <div>
-                                <FaBookOpen />
-                                <p>93 Bài học</p>
-                            </div>
-                            <div>
-                                <IoMdTime />
-                                <p>192 giờ</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    ))
+                }
             </Slider>
         </div>
     )

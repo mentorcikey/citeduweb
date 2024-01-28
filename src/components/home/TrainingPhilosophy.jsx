@@ -7,37 +7,38 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import Participants1 from "../../assets/images/participants1.png"
-import Participants2 from "../../assets/images/participants2.png"
-import Participants3 from "../../assets/images/participants3.png"
-import Participants4 from "../../assets/images/participants3.png"
+import TrainingPhilosophyImage1 from "../../assets/images/trainingPhilosophyImage1.png"
+import TrainingPhilosophyImage2 from "../../assets/images/trainingPhilosophyImage2.png"
+import TrainingPhilosophyImage3 from "../../assets/images/trainingPhilosophyImage3.png"
+import TrainingPhilosophyImage4 from "../../assets/images/trainingPhilosophyImage4.png"
+
+const trainingPhilosophy = [
+    {
+        imagePath: TrainingPhilosophyImage1,
+        titlePhilosophy: "Bứt Phá",
+        contentPhilosophy: "Chương trình đào tạo của chúng tôi được thiết kế để đẩy lẻo học viên vào thế giới lập trình web fullstack. Sự tiến bộ được theo dõi và đánh giá để hỗ trợ từng học viên phát triển từng bước một."
+    },
+    {
+        imagePath: TrainingPhilosophyImage2,
+        titlePhilosophy: "Học Đi Đôi với 'Hành'",
+        contentPhilosophy: "Sau khi hoàn thành, học viên không chỉ đạt đến trình độ lập trình mà còn có khả năng ứng dụng kiến thức vào xây dựng ứng dụng web thực tế. Họ trở nên tự tin trong việc giao tiếp với máy chủ, xử lý cơ sở dữ liệu, và triển khai ứng dụng của mình."
+    },
+    {
+        imagePath: TrainingPhilosophyImage3,
+        titlePhilosophy: "Tự Học Chủ Động",
+        contentPhilosophy: "Chúng tôi khuyến khích học viên chủ động tìm kiếm và 'khai phá' kiến thức mới. Điều này giúp họ ghi nhớ kiến thức lâu dài và có khả năng áp dụng kiến thức vào các dự án thực tế."
+    },
+    {
+        imagePath: TrainingPhilosophyImage4,
+        titlePhilosophy: "Đồng Hành",
+        contentPhilosophy: "Chúng tôi không chỉ cung cấp khóa học, mà còn xây dựng cộng đồng hỗ trợ và chia sẻ. Học viên không chỉ học từ giáo viên mà còn từ sự tương tác và chia sẻ của cộng đồng. Cùng nhau, chúng ta xây dựng và phát triển sự nghiệp lập trình web fullstack."
+    }
+];
 
 function TrainingPhilosophy() {
 
-    const trainingPhilosophy = [
-        {
-            imagePath: Participants1,
-            titlePhilosophy: "Bứt phá",
-            contentPhilosophy: "Chương trình đào tạo được thiết kế riêng cho người Việt. Trong đó, sự tiến bộ của các bạn được theo dõi, đánh giá và đưa ra đề xuất để cải thiện theo từng giai đoạn."
-        },
-        {
-            imagePath: Participants2,
-            titlePhilosophy: "Học đi đôi với 'hành'",
-            contentPhilosophy: "Sau khi hoàn thành, học viên không chỉ đạt đến một trình độ IELTS nhất định, mà có khả năng ứng dụng tiếng Anh trôi chảy trong cuộc sống. Nhiều học viên không chỉ đạt band mà còn có khả năng đọc tài liệu tốt hơn khi làm bài nghiên cứu ở trường đại học, tự tin hơn khi giao tiếp, thuyết trình, viết email bằng tiếng Anh. Việc này nhờ vào phương pháp dạy học để nâng cao trình độ tiếng Anh thực chất, chứ không phải chỉ học tip/mẹo để luyện thi."
-        },
-        {
-            imagePath: Participants3,
-            titlePhilosophy: "Tự học chủ động",
-            contentPhilosophy: "TIW khuyến khích học viên chủ động tìm kiếm và ‘khai phá’ các mảng kiến thức mới, từ đó giúp học viên có thể ghi nhớ và có khả năng áp dụng kiến thức lâu hơn. Giảng viên và trợ giảng của trung tâm đóng vai trò là người hướng dẫn, dẫn dắt cho các bạn trên hành trình chinh phục IELTS của chính mình."
-        },
-        {
-            imagePath: Participants4,
-            titlePhilosophy: "Đồng hành",
-            contentPhilosophy: "Không đơn thuần dừng lại ở cung cấp một khóa học luyện thi, The IELTS Workshop khao khát có thể tạo ra một cộng đồng người trẻ nhiệt huyết, tích cực, chia sẻ và hỗ trợ nhau trong học tập và sự nghiệp. Trong nhiều năm qua, TIW đã tạo dựng các Series bài giảng học thuật, Podcast, tổ chức nhiều chuỗi sự kiện gây tiếng vang như Workshop IELTS101, IELTS EXPO, Cuộc thi hùng biện Speak Yourself,… Tất cả đều miễn phí."
-        }
-    ]
-
     const [activeIndex, setActiveIndex] = useState(0);
+    const [indexImg, setIndexImg] = useState(0)
 
     const handleAccordionOpen = (index) => {
         setIndexImg(index)
@@ -45,11 +46,6 @@ function TrainingPhilosophy() {
             return prevIndex === index ? -1 : index
         });
     };
-
-    const [indexImg, setIndexImg] = useState(0)
-
-    console.log(indexImg)
-
 
     return (
         <div className='trainingPhilosophy-container'>

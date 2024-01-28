@@ -7,6 +7,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   width: 0;
 }

@@ -50,13 +50,13 @@ const FeedbackSlider = () => {
     var settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,

@@ -3,6 +3,17 @@
   overflow: hidden;
 }
 
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #1F409A;
+  transform-origin: 0%;
+  z-index: 2000;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 0;

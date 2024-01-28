@@ -1,5 +1,4 @@
 import React from 'react'
-import "../../styles/home/trendingTechnology.css"
 import { FaReact } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -8,13 +7,16 @@ import { DiMongodb } from "react-icons/di";
 import { FaJava } from "react-icons/fa";
 import Slider from "react-slick";
 
+import "../../styles/home/trendingTechnology.css"
+
 var settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 4,
-    initialSlide: 0,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
         {
             breakpoint: 1024,
@@ -22,7 +24,7 @@ var settings = {
                 slidesToShow: 4,
                 slidesToScroll: 3,
                 infinite: true,
-                dots: true
+                dots: true,
             }
         },
         {

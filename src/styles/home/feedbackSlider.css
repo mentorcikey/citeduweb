@@ -7,8 +7,9 @@
 .feedbackContainer h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 32px;
+    font-weight: 600;
+    color: #1F409A;
 }
 
 .feedbackContainer .feedback-slide {

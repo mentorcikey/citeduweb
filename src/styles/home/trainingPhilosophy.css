@@ -1,13 +1,13 @@
 .trainingPhilosophy-container {
     padding: 0 5vw;
     margin-top: 50px;
-    height: 450px;
+    height: auto;
 }
 
 .trainingPhilosophy-container h1 {
     font-size: 32px;
     font-weight: 600;
-    color: #000;
+    color: #1F409A;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -22,7 +22,7 @@
 
 .trainingPhilosophy-container .trainingPhilosophy-image img {
     width: 80%;
-    height: 350px;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -30,12 +30,29 @@
     flex: 1;
 }
 
-.MuiPaper-root {
+.trainingPhilosophy-container .MuiPaper-root {
     box-shadow: none !important;
 }
 
-.MuiAccordionSummary-content {
+.trainingPhilosophy-container .MuiAccordionSummary-content {
     font-size: 20px;
     font-weight: 500;
+}
 
+.trainingPhilosophy-container .MuiTypography-root {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+}
+
+@media screen and (max-width: 1024px) {
+    .trainingPhilosophy-container .trainingPhilosophy-content {
+        flex-direction: column;
+    }
+
+    .trainingPhilosophy-container .trainingPhilosophy-image img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
 }

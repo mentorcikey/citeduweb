@@ -2,7 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../../styles/home/courseSlider.css'; // Tạo một file CSS để thiết kế slider của bạn
+import '../../styles/home/courseSlider.css';
+
 import BannerSlider from "../../assets/images/bannerSlider.png"
 
 const courses = [
@@ -29,20 +30,22 @@ const CourseSlider = () => {
     };
 
     return (
-        <Slider {...settings}>
-            {courses.map((course, index) => (
-                <div key={index} className="course-slide">
-                    {/* <div className="course-info">
+        <div className="courseSlider-container">
+            <Slider {...settings}>
+                {courses.map((course, index) => (
+                    <div key={index} className="course-slide">
+                        {/* <div className="course-info">
                         <h3>{course.title}</h3>
                         <p>{course.description}</p>
                         <button>Nhận tư vấn</button>
                     </div> */}
-                    <div className="course-image">
-                        <img src={course.imageUrl} alt={`Khoá học ${index + 1}`} />
+                        <div className="course-image">
+                            <img src={course.imageUrl} alt={`Khoá học ${index + 1}`} />
+                        </div>
                     </div>
-                </div>
-            ))}
-        </Slider>
+                ))}
+            </Slider>
+        </div>
     );
 };
 

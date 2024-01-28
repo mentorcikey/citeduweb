@@ -4,7 +4,7 @@
 }
 
 .participants-container h2 {
-    color: #000;
+    color: #1F409A;
     text-align: center;
     margin-bottom: 20px;
     font-size: 32px;
@@ -16,12 +16,13 @@
     text-align: center;
     margin-bottom: 30px;
     font-size: 18px;
+    font-weight: 400;
 }
 
 .participants-container .target-groups {
     display: grid;
     grid-template-columns: 31% 31% 31%;
-    grid-template-rows: 380px;
+    grid-template-rows: auto;
     justify-content: space-between;
     margin-top: 20px;
 }
@@ -48,28 +49,23 @@
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 20px;
+    color: #fff;
 }
 
 .participants-container .target-item p {
-    font-weight: 300;
+    font-weight: 400;
     color: #fff;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
 }
 
 .participants-container .target-item img {
     width: 100%;
-    height: 150px;
+    height: auto;
     border-radius: 20px;
-    margin-left: -30px;
-    border: none;
-    overflow: none;
+    margin-top: 40px;
 }
 
-.participants-container .target-item:nth-child(1) img,
-.participants-container .target-item:nth-child(3) img {
-    margin-bottom: 20px;
-}
 
 @media screen and (max-width: 1024px) {
     .participants-container {
@@ -85,18 +81,12 @@
 @media screen and (max-width: 768px) {
     .participants-container .target-groups {
         grid-template-columns: 100%;
-        grid-template-rows: 370px 370px 370px;
+        grid-template-rows: auto;
         gap: 30px;
     }
 
     .participants-container .target-item {
         align-items: center;
-    }
-
-    .participants-container .target-item img {
-        margin-left: 0px;
-        width: 80%;
-        height: 180px;
     }
 
     .participants-container .target-item:nth-child(1) img,
