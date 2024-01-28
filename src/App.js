@@ -5,6 +5,7 @@ import "./App.css"
 import AboutUs from './pages/aboutUs/AboutUs.jsx';
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+import CoursePage from './pages/course/index.js';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/course" element={<CoursePage />} />
       </Routes>
       <Footer />
     </div>

@@ -1,0 +1,22 @@
+.frequentlyAskedQuestions-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 5vw;
+}
+
+.frequentlyAskedQuestions-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.frequentlyAskedQuestions-container .frequentlyAskedQuestions-accordion {
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .frequentlyAskedQuestions-container .frequentlyAskedQuestions-accordion {
+        width: 100%;
+    }
+
+}

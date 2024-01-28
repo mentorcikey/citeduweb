@@ -14,9 +14,9 @@ import { FaTelegramPlane } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className="footer-section">
+            
             <div className="header-container">
                 <div className="footer-cta">
-
                     <div className="single-cta">
                         <IoLocationSharp />
                         <div className="cta-text">

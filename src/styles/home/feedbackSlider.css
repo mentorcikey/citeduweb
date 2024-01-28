@@ -52,7 +52,7 @@
     font-weight: 400;
 }
 
-.slick-slide>div {
+.feedbackContainer .slick-slide>div {
     margin: 0 10px;
 }
 

@@ -35,7 +35,7 @@ const Header = () => {
                     <ul>
                         <li><Link to="/">Trang chủ</Link></li>
                         <li><Link to="/about-us">Về chúng tôi</Link></li>
-                        <li><Link to="/">Khoá học</Link></li>
+                        <li><Link to="/course">Khoá học</Link></li>
                         <li><Link to="/">Feedback</Link></li>
                         <li><Link to="/">Giảng viên</Link></li>
                         <li><Link to="/">Liên hệ</Link></li>
