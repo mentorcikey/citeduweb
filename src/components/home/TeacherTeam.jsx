@@ -4,7 +4,7 @@ import Aos from "aos"
 import "aos/dist/aos.css"
 
 import "../../styles/home/teacherTeam.css"
-import Teacher from "../../assets/images/teacher.jpg"
+import Teacher from "../../assets/images/teacher.png"
 
 function TeacherTeam() {
 
