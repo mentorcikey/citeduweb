@@ -215,4 +215,22 @@
     .courseInfo-container .courseInfo-card {
         width: 100%;
     }
+
+    .courseInfo-container .courseInfo-content ul {
+        padding-left: 0px;
+    }
+
+    .courseInfo-container .courseInfo-advantage ul li {
+        width: 100%;
+    }
+
+    .courseInfo-container .courseInfo-advantage ul li span {
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .courseInfo-container .courseInfo-advantage ul li svg {
+        width: 10%;
+    }
+
 }

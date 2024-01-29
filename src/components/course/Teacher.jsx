@@ -1,12 +1,19 @@
-import React from 'react'
-
-import "../../styles/course/teacher.css"
-import TeacherImage from "../../assets/images/Teacher.jpg"
+import React, { useEffect } from 'react'
+import Aos from "aos"
+import "aos/dist/aos.css"
 import { PiCertificate } from "react-icons/pi";
 
+import "../../styles/course/teacher.css"
+import TeacherImage from "../../assets/images/teacher.jpg"
+
 function Teacher() {
+
+    useEffect(() => {
+        Aos.init()
+    })
+
     return (
-        <div className='teacher-container'>
+        <section data-aos="fade-up-right" className='teacher-container'>
             <img src={TeacherImage} alt="TeacherImage" />
             <div>
                 <h3>Tống Văn Chính</h3>
@@ -19,7 +26,7 @@ function Teacher() {
                     <li><PiCertificate /><span>Sở hữu kênh tik tok cá nhân hơn 30k theo dõi</span></li>
                 </ul>
             </div>
-        </div>
+        </section>
     )
 }
 

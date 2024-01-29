@@ -38,8 +38,9 @@ header.header-sticky .mobile-menu-icon {
 }
 
 header.header-sticky .header-logo img {
-    width: 120px;
+    width: 150px;
     height: 100px;
+    border-radius: 10px;
 }
 
 header.header-sticky nav ul li a {

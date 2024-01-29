@@ -2,7 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../../styles/home/courseSlider.css'; // Tạo một file CSS để thiết kế slider của bạn
+import '../../styles/home/courseSlider.css';
+
 import BannerSlider from "../../assets/images/bannerSlider.png"
 
 const courses = [
@@ -13,16 +14,16 @@ const courses = [
     }
 ];
 
-const CourseSlider = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-    };
+const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+};
 
+const CourseSlider = () => {
     return (
         <Slider {...settings}>
             {courses.map((course, index) => (

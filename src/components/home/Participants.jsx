@@ -14,7 +14,7 @@ function Participants() {
     })
 
     return (
-        <div className="participants-container">
+        <section className="participants-container">
             <h2>Đối tượng tham gia</h2>
             <p className='desc'>
                 CIT Education chính là nơi khởi đầu cho những thành công của các kỹ sư CNTT trong tương lai,
@@ -42,7 +42,7 @@ function Participants() {
                     <img src={ParticipantsImage3} alt="ParticipantsImage3" />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

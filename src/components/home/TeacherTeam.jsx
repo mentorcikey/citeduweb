@@ -4,7 +4,7 @@ import Aos from "aos"
 import "aos/dist/aos.css"
 
 import "../../styles/home/teacherTeam.css"
-import Teacher from "../../assets/images/Teacher.jpg"
+import Teacher from "../../assets/images/teacher.jpg"
 
 function TeacherTeam() {
 
@@ -13,7 +13,7 @@ function TeacherTeam() {
     })
 
     return (
-        <div className='teacherTeam-container'>
+        <section className='teacherTeam-container'>
             <img data-aos="fade-up-right" src={Teacher} alt="Teacher" />
             <div data-aos="fade-up-left" className='teacherTeam-content'>
                 <h1>"Nhân tố đặc biệt giúp bạn từ con số 0 trở thành FullStack Developer"</h1>
@@ -29,7 +29,7 @@ function TeacherTeam() {
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

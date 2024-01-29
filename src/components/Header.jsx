@@ -8,9 +8,8 @@ import FacebookIcon from "../assets/images/icons8-facebook-48.png"
 import TiktokIcon from "../assets/images/icons8-tiktok-50.png"
 import YoutubeIcon from "../assets/images/icons8-youtube-48.png"
 import LogoCITEducation from "../assets/images/logo.png"
-import LogoCITEducationSticky from "../assets/images/logoSticky.jpg"
+import LogoCITEducationSticky from "../assets/images/logoSticky.png"
 import '../styles/home/header.css';
-
 import Backdrop from './home/Backdrop';
 
 const Header = () => {
@@ -72,9 +71,7 @@ const Header = () => {
                     </div>
                     <ul className='header-navlinks'>
                         <li><Link to="/" className={router === "/" ? "focus" : ""}>Trang chủ</Link></li>
-                        <li><Link to="/about-us" className={router === "/about-us" ? "focus" : ""}>Về chúng tôi</Link></li>
                         <li><Link to="/course" className={router === "/course" ? "focus" : ""}>Khoá học nổi bật</Link></li>
-                        <li><Link to="/contact" className={router === "/contact" ? "focus" : ""}>Liên hệ</Link></li>
                     </ul>
                     {
                         showSidebar ? <>

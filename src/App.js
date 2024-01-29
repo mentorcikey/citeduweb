@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import { motion, useScroll } from "framer-motion";
 import { FaPhone } from 'react-icons/fa';
 import { IoIosArrowDropupCircle } from "react-icons/io";
-import { Shake } from 'reshake'
 
 import "./App.css"
 import ZaloIcon from "./assets/images/zaloIcon.png"
@@ -12,6 +11,7 @@ import AboutUs from './pages/aboutUs/AboutUs.jsx';
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import CoursePage from './pages/course/index.js';
+import ScrollToTop from "./components/ScrollToTop.js"
 
 const App = () => {
   const { scrollYProgress } = useScroll();
@@ -46,36 +46,14 @@ const App = () => {
           <div onClick={scrollTop} className='arrow-icon'><IoIosArrowDropupCircle /></div> : ""
       }
       <div className='contact-container'>
-        <Shake
-          h={12}
-          v={5}
-          r={3}
-          dur={510}
-          int={10}
-          max={100}
-          fixed={true}
-          fixedStop={false}
-          freez={false}>
-          <div>
-            <FaPhone className="phone-icon" onClick={handleIconPhoneClick} />
-            <span>Gọi ngay</span>
-          </div>
-        </Shake>
-        <Shake
-          h={12}
-          v={5}
-          r={3}
-          dur={510}
-          int={10}
-          max={100}
-          fixed={true}
-          fixedStop={false}
-          freez={false}>
-          <div>
-            <a href="https://zalo.me/3631761188736786993"><img className="zalo-icon" src={ZaloIcon} alt="ZaloIcon" /></a>
-            <span>Chat ngay</span>
-          </div>
-        </Shake>
+        <div>
+          <FaPhone className="phone-icon" onClick={handleIconPhoneClick} />
+          <span>Gọi ngay</span>
+        </div>
+        <div>
+          <a href="https://zalo.me/3631761188736786993"><img className="zalo-icon" src={ZaloIcon} alt="ZaloIcon" /></a>
+          <span>Chat ngay</span>
+        </div>
       </div>
       <motion.div
         className="progress-bar"
@@ -83,6 +61,7 @@ const App = () => {
         whileInView={{ opacity: 1 }}
         style={{ scaleX: scrollYProgress }}
       />
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

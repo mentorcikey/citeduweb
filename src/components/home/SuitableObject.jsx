@@ -12,7 +12,7 @@ function SuitableObject() {
     })
 
     return (
-        <div className='suitableObject-container'>
+        <section className='suitableObject-container'>
             <img data-aos="zoom-in-right" src={SuitableObjectImage} alt="CourseAdvantagesImage" />
             <div data-aos="zoom-in-left" className='suitableObject-content'>
                 <h1>Nếu bạn đang ...</h1>
@@ -34,7 +34,7 @@ function SuitableObject() {
                     <button><a href="#consultationForm">Đăng kí tư vấn miễn phí</a></button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

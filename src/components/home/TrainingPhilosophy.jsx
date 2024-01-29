@@ -53,7 +53,7 @@ function TrainingPhilosophy() {
     })
 
     return (
-        <div className='trainingPhilosophy-container'>
+        <section className='trainingPhilosophy-container'>
             <h1>Triết lý đào tạo của CIT Education để hàng ngàn học viên có việc làm</h1>
             <div className='trainingPhilosophy-content'>
                 <div data-aos="fade-right" className='trainingPhilosophy-image'>
@@ -92,7 +92,7 @@ function TrainingPhilosophy() {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
 
     )
 }

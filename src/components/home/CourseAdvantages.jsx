@@ -3,7 +3,6 @@ import Aos from "aos"
 import "aos/dist/aos.css"
 
 import "../../styles/home/courseAdvantages.css"
-
 import CourseAdvantagesImage from "../../assets/images/courseAdvantages.png"
 
 function CourseAdvantages() {
@@ -13,7 +12,7 @@ function CourseAdvantages() {
     })
 
     return (
-        <div className='courseAdvantages-container'>
+        <section className='courseAdvantages-container'>
             <img data-aos="zoom-in-left" src={CourseAdvantagesImage} alt="CourseAdvantagesImage" />
             <div data-aos="zoom-in-right" className='courseAdvantages-content'>
                 <h1>Tại sao khoá lập trình FullStack của CIT Education lại được hàng ngàn học viên lựa chọn?</h1>
@@ -35,7 +34,7 @@ function CourseAdvantages() {
                     <button><a href="#consultationForm">Đăng kí tư vấn miễn phí</a></button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

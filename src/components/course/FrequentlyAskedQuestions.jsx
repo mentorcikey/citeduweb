@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-
+import React, { useState, useEffect } from 'react'
+import Aos from "aos"
+import "aos/dist/aos.css"
 import { Typography } from "@mui/material"
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -8,26 +9,30 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import "../../styles/course/frequentlyAskedQuestions.css"
 
-function FrequentlyAskedQuestions() {
+const frequentlyAskedQuestions = [
+    {
+        titleQuestions: "Học phí cho khoá học FullStack là bao nhiêu?",
+        contentQuestions: "CIT Education luôn minh bạch và rõ ràng trong việc cung cấp thông tin về học phí của các khóa học. Các bạn có thể tham khảo chi tiết giá của mỗi khóa học qua Fanpage của CIT Education nhé!"
+    },
+    {
+        titleQuestions: "Lộ trình học FullStack tại CIT Education như thế nào?",
+        contentQuestions: "Lộ trình của khoá học FullStack của CIT Education gồm 10 module với lộ trình đào tạo từ con số 0 để bất kì đối tượng nào cũng có thể tham gia học được"
+    },
+    {
+        titleQuestions: "CIT Education có cam kết chất lượng đầu ra không?",
+        contentQuestions: "Chúng tôi cam kết đầu ra liên kết doanh nghiệp cho học viên đi thực tập ngay sau khi hoàn thành khoá học bằng văn bản"
+    },
+    {
+        titleQuestions: "Thời gian cho một khóa học FullStack tại CIT Education là bao lâu?",
+        contentQuestions: "Với việc tối ưu và chia nhỏ lộ trình học tập, thời gian cho một khóa học FullStack tại CIT Education rơi vào khoảng 6 - 8 tháng."
+    },
+    {
+        titleQuestions: "Đăng ký học tại CIT Education như nào?",
+        contentQuestions: "Bạn có thể đăng ký học bằng cách điền thông tin vào form tư vấn, đội ngũ tư vấn sẽ liên hệ với bạn trong vòng 24h hoặc liên hệ qua hotline/zalo 0329621710 của trung tâm nhé!"
+    }
+]
 
-    const frequentlyAskedQuestions = [
-        {
-            titleQuestions: "Bứt phá",
-            contentQuestions: "Chương trình đào tạo được thiết kế riêng cho người Việt. Trong đó, sự tiến bộ của các bạn được theo dõi, đánh giá và đưa ra đề xuất để cải thiện theo từng giai đoạn."
-        },
-        {
-            titleQuestions: "Học đi đôi với 'hành'",
-            contentQuestions: "Sau khi hoàn thành, học viên không chỉ đạt đến một trình độ IELTS nhất định, mà có khả năng ứng dụng tiếng Anh trôi chảy trong cuộc sống. Nhiều học viên không chỉ đạt band mà còn có khả năng đọc tài liệu tốt hơn khi làm bài nghiên cứu ở trường đại học, tự tin hơn khi giao tiếp, thuyết trình, viết email bằng tiếng Anh. Việc này nhờ vào phương pháp dạy học để nâng cao trình độ tiếng Anh thực chất, chứ không phải chỉ học tip/mẹo để luyện thi."
-        },
-        {
-            titleQuestions: "Tự học chủ động",
-            contentQuestions: "TIW khuyến khích học viên chủ động tìm kiếm và ‘khai phá’ các mảng kiến thức mới, từ đó giúp học viên có thể ghi nhớ và có khả năng áp dụng kiến thức lâu hơn. Giảng viên và trợ giảng của trung tâm đóng vai trò là người hướng dẫn, dẫn dắt cho các bạn trên hành trình chinh phục IELTS của chính mình."
-        },
-        {
-            titleQuestions: "Đồng hành",
-            contentQuestions: "Không đơn thuần dừng lại ở cung cấp một khóa học luyện thi, The IELTS Workshop khao khát có thể tạo ra một cộng đồng người trẻ nhiệt huyết, tích cực, chia sẻ và hỗ trợ nhau trong học tập và sự nghiệp. Trong nhiều năm qua, TIW đã tạo dựng các Series bài giảng học thuật, Podcast, tổ chức nhiều chuỗi sự kiện gây tiếng vang như Workshop IELTS101, IELTS EXPO, Cuộc thi hùng biện Speak Yourself,… Tất cả đều miễn phí."
-        }
-    ]
+function FrequentlyAskedQuestions() {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -37,12 +42,16 @@ function FrequentlyAskedQuestions() {
         });
     };
 
+    useEffect(() => {
+        Aos.init()
+    })
+
     return (
-        <div className='frequentlyAskedQuestions-container'>
+        <section className='frequentlyAskedQuestions-container'>
             <h1>
-                Câu Hỏi Thường Gặp!
+                Câu Hỏi <span> Thường Gặp! </span>
             </h1>
-            <div className='frequentlyAskedQuestions-accordion'>
+            <div data-aos="zoom-in" className='frequentlyAskedQuestions-accordion'>
                 {frequentlyAskedQuestions.map((item, index) => (
                     <Accordion
                         key={index}
@@ -63,7 +72,7 @@ function FrequentlyAskedQuestions() {
                     </Accordion>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 

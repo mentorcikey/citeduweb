@@ -54,7 +54,7 @@ function TrendingTechnology() {
     })
 
     return (
-        <div className='trendingTechnology-container'>
+        <section className='trendingTechnology-container'>
             <h1>Công nghệ chúng tôi đào tạo</h1>
             <Slider {...settings} className='trendingTechnology-slider'>
                 <div className='trendingTechnology-slide' data-aos="fade-right">
@@ -82,7 +82,7 @@ function TrendingTechnology() {
                     <p>MongoDB</p>
                 </div>
             </Slider>
-        </div>
+        </section>
     )
 }
 
