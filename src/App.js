@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, useScroll } from "framer-motion";
 import { FaPhone } from 'react-icons/fa';
@@ -37,23 +37,6 @@ const App = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
-
-  const [isShaking, setShaking] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Bật hiệu ứng rung sau 5 giây
-      setShaking(true);
-
-      // Sau 1 giây, tắt hiệu ứng rung
-      setTimeout(() => {
-        setShaking(false);
-      }, 1000);
-    }, 6000); // 5 giây + 1 giây nghỉ
-
-    // Cleanup interval khi component unmount
-    return () => clearInterval(interval);
   }, []);
 
   return (
