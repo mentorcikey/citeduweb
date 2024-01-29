@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { IoIosArrowDroprightCircle } from "react-icons/io";
 import Aos from "aos"
 import "aos/dist/aos.css"
 
