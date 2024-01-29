@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { PiCertificate } from "react-icons/pi";
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 import "../../styles/home/teacherTeam.css"
 import Teacher from "../../assets/images/Teacher.jpg"
-import { PiCertificate } from "react-icons/pi";
 
 function TeacherTeam() {
+
+    useEffect(() => {
+        Aos.init()
+    })
+
     return (
         <div className='teacherTeam-container'>
-            <h1>Nhân tố đặc biệt giúp bạn nâng cao hiệu quả học tập</h1>
-            <div className='teacherTeam-slider' >
-                <div className='teacherTeam-slider-item'>
-                    <img src={Teacher} alt="Teacher" />
-                    <h3>Tống Văn Chính</h3>
-                </div>
-            </div>
-            <div className='teacherTeam-teacher'>
-                <img src={Teacher} alt="Teacher" />
+            <img data-aos="fade-up-right" src={Teacher} alt="Teacher" />
+            <div data-aos="fade-up-left" className='teacherTeam-content'>
+                <h1>"Nhân tố đặc biệt giúp bạn từ con số 0 trở thành FullStack Developer"</h1>
                 <div>
                     <h3>Tống Văn Chính</h3>
                     <p>Giáo viên / Mentor khoá FULLSTACK</p>

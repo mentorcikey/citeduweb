@@ -1,7 +1,8 @@
 .footer-container {
-    background-color: #CCCCCC;
+    background-color: #1F409A;
     padding: 50px 5vw 0;
     width: 100%;
+    color: #fff;
 }
 
 .footer-content {
@@ -62,7 +63,6 @@
 .footer-content .footer-content-item4 p {
     font-size: 15px;
     font-weight: 400;
-    color: #000;
     margin-top: 10px;
 }
 
@@ -101,7 +101,7 @@
 @media screen and (max-width: 1024px) {
 
     .footer-container {
-        padding: 50px 100px 50px;
+        padding: 50px 5vw;
     }
 
     .footer-content {

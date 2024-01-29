@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import "../../styles/home/trainingPhilosophy.css"
-
+import React, { useEffect, useState } from 'react'
+import Aos from "aos"
+import "aos/dist/aos.css"
 import { Typography } from "@mui/material"
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -11,6 +11,7 @@ import TrainingPhilosophyImage1 from "../../assets/images/trainingPhilosophyImag
 import TrainingPhilosophyImage2 from "../../assets/images/trainingPhilosophyImage2.png"
 import TrainingPhilosophyImage3 from "../../assets/images/trainingPhilosophyImage3.png"
 import TrainingPhilosophyImage4 from "../../assets/images/trainingPhilosophyImage4.png"
+import "../../styles/home/trainingPhilosophy.css"
 
 const trainingPhilosophy = [
     {
@@ -47,11 +48,15 @@ function TrainingPhilosophy() {
         });
     };
 
+    useEffect(() => {
+        Aos.init()
+    })
+
     return (
         <div className='trainingPhilosophy-container'>
-            <h1>Triết lý đào tạo</h1>
+            <h1>Triết lý đào tạo của CIT Education để hàng ngàn học viên có việc làm</h1>
             <div className='trainingPhilosophy-content'>
-                <div className='trainingPhilosophy-image'>
+                <div data-aos="fade-right" className='trainingPhilosophy-image'>
                     {trainingPhilosophy.map((item, index) => (
                         <img
                             key={index}
@@ -66,7 +71,7 @@ function TrainingPhilosophy() {
                         />
                     ))}
                 </div>
-                <div className='trainingPhilosophy-accordion'>
+                <div data-aos="fade-left" className='trainingPhilosophy-accordion'>
                     {trainingPhilosophy.map((item, index) => (
                         <Accordion
                             key={index}

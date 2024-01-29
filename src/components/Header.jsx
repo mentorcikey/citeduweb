@@ -8,6 +8,7 @@ import FacebookIcon from "../assets/images/icons8-facebook-48.png"
 import TiktokIcon from "../assets/images/icons8-tiktok-50.png"
 import YoutubeIcon from "../assets/images/icons8-youtube-48.png"
 import LogoCITEducation from "../assets/images/logo.png"
+import LogoCITEducationSticky from "../assets/images/logoSticky.jpg"
 import '../styles/home/header.css';
 
 import Backdrop from './home/Backdrop';
@@ -59,9 +60,11 @@ const Header = () => {
 
     return (
         <>
-            <header className={`header ${isHeaderSticky ? 'header-sticky active' : ''}`}>
+            <header id="header" className={`header ${isHeaderSticky ? 'header-sticky' : ''}`}>
                 <div className="header-logo">
-                    <Link to="/">  <img src={LogoCITEducation} alt="logoCITEducation" /></Link>
+                    {
+                        isHeaderSticky ? <Link to="/">  <img src={LogoCITEducationSticky} alt="LogoCITEducationSticky" /></Link> : <Link to="/">  <img src={LogoCITEducation} alt="logoCITEducation" /></Link>
+                    }
                 </div>
                 <nav className={showSidebar ? 'show' : ''}>
                     <div className='iconClose'>
@@ -83,9 +86,9 @@ const Header = () => {
                                     <a href="#home"><img src={YoutubeIcon} alt="YoutubeIcon" /></a>
                                 </div>
                             </div>
-                            <div className="header-logo-mobile">
+                            {/* <div className="header-logo-mobile">
                                 <img src={LogoCITEducation} alt="LogoCITEducation" />
-                            </div>
+                            </div> */}
                             <div className="header-text">
                                 <p>Với sứ mệnh mang đến những nguồn kiến thức chuẩn chỉnh, bài bản, chất lượng để chắp cánh cho khát vọng, tương lai của các bạn trẻ học sinh, sinh viên Việt Nam trong ngành CNTT chúng tôi cam kết rằng sẽ mang đến những khoá học chất lượng với học phí phải chăng để bất kì đối tượng nào cũng có thể tham gia và tiếp cận với ngành CNTT
                                 </p>

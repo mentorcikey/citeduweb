@@ -1,11 +1,12 @@
-import React from 'react'
-
-import "../../styles/home/latestCourse.css"
+import React, { useEffect } from 'react'
+import Aos from "aos"
+import "aos/dist/aos.css"
 import Slider from "react-slick";
 import { FaBookOpen } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 
+import "../../styles/home/latestCourse.css"
 import CourseImage from "../../assets/images/banner.png"
 
 const lastestCourses = [
@@ -35,7 +36,7 @@ function LatestCourse() {
         autoplaySpeed: 2000,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -61,13 +62,19 @@ function LatestCourse() {
         ]
     };
 
+    useEffect(() => {
+        Aos.init()
+    })
+
+
+
     return (
         <div className='latestCourse-container'>
             <h1>Những khoá học mới nhất</h1>
             <Slider {...settings} className='latestCourse-slider'>
                 {
                     lastestCourses.map((item, index) => (
-                        <div key={index} className='latestCourse-slide'>
+                        <div key={index} className='latestCourse-slide' data-aos="zoom-in">
                             <div className='latestCourse-slide-img'>
                                 <img src={item.imageUrl} alt="Banner" />
                             </div>

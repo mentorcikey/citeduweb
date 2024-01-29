@@ -1,11 +1,18 @@
-import React from 'react'
-import "../../styles/home/participants.css"
+import React, { useEffect } from 'react'
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 import ParticipantsImage1 from "../../assets/images/participantsImage1.png"
 import ParticipantsImage2 from "../../assets/images/participantsImage2.png"
 import ParticipantsImage3 from "../../assets/images/participantsImage3.png"
+import "../../styles/home/participants.css"
 
 function Participants() {
+
+    useEffect(() => {
+        Aos.init()
+    })
+
     return (
         <div className="participants-container">
             <h2>Đối tượng tham gia</h2>
@@ -14,21 +21,21 @@ function Participants() {
                 cung cấp và đào tạo nguồn nhân lực IT chất lượng cao cho các dự án thực tế.
             </p>
             <div className="target-groups">
-                <div className="target-item">
+                <div data-aos="zoom-in-right" className="target-item">
                     <div>
                         <h3>Bạn muốn được đào tạo? </h3>
                         <p>Bạn là người mới bắt đầu hoặc mong muốn được đào tạo về những kỹ năng, công nghệ mới.</p>
                     </div>
                     <img src={ParticipantsImage1} alt="ParticipantsImage1" />
                 </div>
-                <div className="target-item">
+                <div data-aos="zoom-in-down" className="target-item">
                     <div>
                         <h3>Bạn muốn được thực tập? </h3>
                         <p>Bạn đang tìm kiếm cơ hội thực tập với những trải nghiệm thực tế, giúp nâng cao kỹ năng chuyên môn & kỹ năng mềm, làm quen với môi trường và văn hóa doanh nghiệp.</p>
                     </div>
                     <img src={ParticipantsImage2} alt="ParticipantsImage2" />
                 </div>
-                <div className="target-item">
+                <div data-aos="zoom-in-left" className="target-item">
                     <div>
                         <h3>Bạn muốn tìm cơ hội việc làm?</h3>
                         <p>Bạn đã và đang theo đuổi ngành Công nghệ, muốn thử sức với vị trí Fresher hoặc làm việc tại dự án.</p></div>

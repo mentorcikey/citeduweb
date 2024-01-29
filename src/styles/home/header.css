@@ -26,9 +26,24 @@ header.header-sticky {
     right: 0;
     left: 0;
     z-index: 1000;
-    background-color: #ccc;
+    padding: 0 5vw;
+    background-color: #1F409A;
     transition: transform 0.5s ease, opacity 0.5s ease;
     animation: headerSticky 0.5s linear;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+header.header-sticky .mobile-menu-icon {
+    color: #fff;
+}
+
+header.header-sticky .header-logo img {
+    width: 120px;
+    height: 100px;
+}
+
+header.header-sticky nav ul li a {
+    color: #fff;
 }
 
 @keyframes headerSticky {
@@ -52,7 +67,7 @@ header .header-logo {
 
 header .header-logo img {
     width: 180px;
-    height: 90px;
+    height: auto;
 }
 
 header nav {
@@ -120,8 +135,8 @@ header .focus {
 @media screen and (max-width: 1024px) {
 
     header .header-logo img {
-        width: 130px;
-        height: 70px;
+        width: 150px;
+        height: auto;
     }
 
     header nav {
@@ -146,7 +161,7 @@ header .focus {
     }
 
     header nav div.iconClose {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #1F409A;
         width: 100%;
         padding: 10px 20px;
         display: flex;
@@ -237,5 +252,11 @@ header .focus {
         font-weight: 500;
         text-align: center;
         color: #000;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .header-text p {
+        text-align: start;
     }
 }

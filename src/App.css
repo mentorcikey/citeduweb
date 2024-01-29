@@ -9,10 +9,60 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: #1F409A;
+  background: #3498db;
   transform-origin: 0%;
   z-index: 2000;
 }
+
+.contact-container {
+  position: fixed;
+  left: 10px;
+  bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+  z-index: 10000;
+}
+
+.contact-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-container div span {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.arrow-icon {
+  position: fixed;
+  right: 27px;
+  bottom: 20%;
+  color: #000;
+  z-index: 10000;
+}
+
+.arrow-icon svg {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.phone-icon {
+  font-size: 40px;
+  color: red;
+  cursor: pointer;
+}
+
+.zalo-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 768px) {
   .container {

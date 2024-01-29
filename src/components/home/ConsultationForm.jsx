@@ -5,6 +5,9 @@ import emailjs from '@emailjs/browser';
 import { useForm } from "react-hook-form"
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useEffect } from 'react'
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 import Logo from "../../assets/images/image.png"
 import "../../styles/home/consultationForm.css"
@@ -73,9 +76,12 @@ function ConsultationForm() {
         reset()
     }
 
+    useEffect(() => {
+        Aos.init()
+    })
 
     return (
-        <div className='consultation-form-container'>
+        <div id="consultationForm" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500" className='consultation-form-container'>
             <div className='consultation-form-content'>
                 <div className='consultation-form-title'>
                     <h3>Đăng ký tư vấn miễn phí</h3>
