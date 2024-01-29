@@ -4,7 +4,7 @@ import "aos/dist/aos.css"
 import { PiCertificate } from "react-icons/pi";
 
 import "../../styles/course/teacher.css"
-import TeacherImage from "../../assets/images/teacher.jpg"
+import TeacherImage from "../../assets/images/teacher.png"
 
 function Teacher() {
 
