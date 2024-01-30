@@ -8,6 +8,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { IoMdBook } from "react-icons/io";
 
 import "../../styles/course/courseInfo.css"
+import CourseInfoImage from "../../assets/images/courseInfo.png"
 import SaleImage from "../../assets/images/saleImage.png"
 import Teacher from "./Teacher"
 
@@ -93,7 +94,7 @@ function CourseInfo() {
                 </div>
             </div>
             <div data-aos="fade-left" className='courseInfo-card'>
-                <img src={SaleImage} alt="SaleImage" />
+                <img src={CourseInfoImage} alt="SaleImage" />
                 <div className='courseInfo-content'>
                     <div className='courseInfo-content-item'>
                         <IoMdTime />

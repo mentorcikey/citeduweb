@@ -7,29 +7,28 @@ import { IoMdTime } from "react-icons/io";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 
 import "../../styles/home/latestCourse.css"
-import CourseImage from "../../assets/images/banner.png"
+import LastestCoursesImage1 from "../../assets/images/lastestCourses1.png"
+import LastestCoursesImage2 from "../../assets/images/lastestCourses2.png"
+import LastestCoursesImage3 from "../../assets/images/lastestCourses3.png"
 
 const lastestCourses = [
     {
         nameCourse: 'Khoá học lập trình Web FullStack',
-        imageUrl: CourseImage,
+        imageUrl: LastestCoursesImage1,
     },
     {
         nameCourse: 'Khoá học lập trình Web Front-end',
-        imageUrl: CourseImage,
+        imageUrl: LastestCoursesImage2,
     }, {
         nameCourse: 'Khoá học lập trình Web Back-end',
-        imageUrl: CourseImage,
-    }, {
-        nameCourse: 'Khoá học lập trình Web',
-        imageUrl: CourseImage,
-    },
+        imageUrl: LastestCoursesImage3,
+    }
 ];
 
 const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
