@@ -60,6 +60,7 @@ const Header = () => {
     return (
         <>
             <header id="header" className={`header ${isHeaderSticky ? 'header-sticky' : ''}`}>
+
                 <div className="header-logo">
                     {
                         isHeaderSticky ? <Link to="/">  <img src={LogoCITEducationSticky} alt="LogoCITEducationSticky" /></Link> : <Link to="/">  <img src={LogoCITEducation} alt="logoCITEducation" /></Link>
@@ -72,6 +73,8 @@ const Header = () => {
                     <ul className='header-navlinks'>
                         <li><Link to="/" className={router === "/" ? "focus" : ""}>Trang chủ</Link></li>
                         <li><Link to="/course" className={router === "/course" ? "focus" : ""}>Khoá học nổi bật</Link></li>
+                        <li><Link to="/about-us" className={router === "/about-us" ? "focus" : ""}>Về chúng tôi</Link></li>
+                        <li><Link to="/contact" className={router === "/contact" ? "focus" : ""}>Liên hệ</Link></li>
                     </ul>
                     {
                         showSidebar ? <>
@@ -83,9 +86,6 @@ const Header = () => {
                                     <a href="#home"><img src={YoutubeIcon} alt="YoutubeIcon" /></a>
                                 </div>
                             </div>
-                            {/* <div className="header-logo-mobile">
-                                <img src={LogoCITEducation} alt="LogoCITEducation" />
-                            </div> */}
                             <div className="header-text">
                                 <p>Với sứ mệnh mang đến những nguồn kiến thức chuẩn chỉnh, bài bản, chất lượng để chắp cánh cho khát vọng, tương lai của các bạn trẻ học sinh, sinh viên Việt Nam trong ngành CNTT chúng tôi cam kết rằng sẽ mang đến những khoá học chất lượng với học phí phải chăng để bất kì đối tượng nào cũng có thể tham gia và tiếp cận với ngành CNTT
                                 </p>
@@ -97,9 +97,11 @@ const Header = () => {
                             : ""
                     }
                 </nav>
+
                 <div className="mobile-menu-icon" onClick={openSidebar}>
                     <FaBars size={30} />
                 </div>
+                <a href="#consultationForm" className="header-button">Tư vấn lộ trình</a>
             </header>
             <Backdrop show={showSidebar} onClick={closeSidebar} />
         </>

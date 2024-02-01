@@ -23,7 +23,7 @@ function CourseInfo() {
             <div className='courseInfo-content'>
                 <h1>Full-Stack JavaScript Web for Beginner</h1>
                 <div className='courseInfo-contact'>
-                    <p>Nếu bạn muốn biết thêm thông tin về khoá học. Hãy liên hệ với chúng tôi.</p>
+                    <p>Nếu bạn muốn biết thêm thông tin về khoá học. Hãy liên hệ với chúng tôi</p>
                     <div>
                         <img src={SaleImage} alt="SaleImage" />
                         <ul>
@@ -36,18 +36,18 @@ function CourseInfo() {
                     <h1>Khoá học này dành cho ai?</h1>
                     <hr />
                     <ul data-aos="fade-right">
-                        <li>Những người đi làm hoặc sinh viên ngành khác (Non-IT) muốn chuyển sang học CNTT để làm về IT, trở thành lập trình viên chuyên nghiệp, có thể tham gia vào các dự án phần mềm tại các doanh nghiệp hoặc tự xây dựng ứng dụng phần mềm cho mình.</li>
-                        <li>Sinh viên ngành CNTT hoặc các ngành khác muốn củng cố các kiến thức nền tảng về IT, phát triển tư duy lập trình, hiểu cấu trúc dữ liệu giải thuật, nắm chắc kiến thức từ cơ bản đến nâng cao về Java – một trong những công nghệ lập trình phổ biến được nhiều dự án phần mềm tại các công ty sử dụng.</li>
-                        <li>Dành cho những ai yêu thích, đam mê và muốn tìm hiểu về lập trình, mong muốn trở thành lập trình viên Full Stack Java Web chuyên nghiệp – vị trí có mức lương cao thuộc top đầu trong thị trường việc làm IT.</li>
+                        <li>Những người đi làm hoặc sinh viên ngành khác (Non-IT) muốn chuyển sang học CNTT để làm về IT, trở thành lập trình viên chuyên nghiệp, có thể tham gia vào các dự án phần mềm tại các doanh nghiệp hoặc tự xây dựng ứng dụng phần mềm cho mình</li>
+                        <li>Sinh viên ngành CNTT hoặc các ngành khác muốn củng cố các kiến thức nền tảng về IT, phát triển tư duy lập trình, hiểu cấu trúc dữ liệu giải thuật, nắm chắc kiến thức từ cơ bản đến nâng cao về Java – một trong những công nghệ lập trình phổ biến được nhiều dự án phần mềm tại các công ty sử dụng</li>
+                        <li>Dành cho những ai yêu thích, đam mê và muốn tìm hiểu về lập trình, mong muốn trở thành lập trình viên Full Stack Java Web chuyên nghiệp – vị trí có mức lương cao thuộc top đầu trong thị trường việc làm IT</li>
                     </ul>
                 </div>
                 <div className='courseInfo-why-joinCourse'>
                     <h1>Tại sao nên tham gia khoá học này?</h1>
                     <hr />
                     <ul data-aos="fade-right">
-                        <li>Những người đi làm hoặc sinh viên ngành khác (Non-IT) muốn chuyển sang học CNTT để làm về IT, trở thành lập trình viên chuyên nghiệp, có thể tham gia vào các dự án phần mềm tại các doanh nghiệp hoặc tự xây dựng ứng dụng phần mềm cho mình.</li>
-                        <li>Sinh viên ngành CNTT hoặc các ngành khác muốn củng cố các kiến thức nền tảng về IT, phát triển tư duy lập trình, hiểu cấu trúc dữ liệu giải thuật, nắm chắc kiến thức từ cơ bản đến nâng cao về Java – một trong những công nghệ lập trình phổ biến được nhiều dự án phần mềm tại các công ty sử dụng.</li>
-                        <li>Dành cho những ai yêu thích, đam mê và muốn tìm hiểu về lập trình, mong muốn trở thành lập trình viên Full Stack Java Web chuyên nghiệp – vị trí có mức lương cao thuộc top đầu trong thị trường việc làm IT.</li>
+                        <li>Những người đi làm hoặc sinh viên ngành khác (Non-IT) muốn chuyển sang học CNTT để làm về IT, trở thành lập trình viên chuyên nghiệp, có thể tham gia vào các dự án phần mềm tại các doanh nghiệp hoặc tự xây dựng ứng dụng phần mềm cho mình</li>
+                        <li>Sinh viên ngành CNTT hoặc các ngành khác muốn củng cố các kiến thức nền tảng về IT, phát triển tư duy lập trình, hiểu cấu trúc dữ liệu giải thuật, nắm chắc kiến thức từ cơ bản đến nâng cao về Java – một trong những công nghệ lập trình phổ biến được nhiều dự án phần mềm tại các công ty sử dụng</li>
+                        <li>Dành cho những ai yêu thích, đam mê và muốn tìm hiểu về lập trình, mong muốn trở thành lập trình viên Full Stack Java Web chuyên nghiệp – vị trí có mức lương cao thuộc top đầu trong thị trường việc làm IT</li>
                     </ul>
                 </div>
                 <div className='courseInfo-advantage'>

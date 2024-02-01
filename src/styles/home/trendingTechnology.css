@@ -26,7 +26,7 @@
     align-items: center;
     padding: 70px 0;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .trendingTechnology-container .trendingTechnology-slide:hover {
@@ -34,6 +34,10 @@
     transition: all 0.3s linear;
     cursor: pointer;
     background-color: #37C5F4;
+}
+
+.trendingTechnology-container .slick-dots {
+    bottom: -45px;
 }
 
 .trendingTechnology-container .trendingTechnology-slide svg {

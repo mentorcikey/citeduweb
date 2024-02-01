@@ -16,6 +16,11 @@
     list-style: none;
 }
 
+.footer-content li:hover {
+    cursor: pointer;
+    color: #37C5F4;
+}
+
 .footer-content .footer-content-item1 p {
     display: flex;
     align-items: center;

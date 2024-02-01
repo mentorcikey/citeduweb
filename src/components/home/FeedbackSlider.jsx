@@ -97,7 +97,7 @@ const FeedbackSlider = () => {
 
     return (
         <section data-aos="zoom-in-up" className='feedbackContainer'>
-            <h2>Feedback từ +1000 học viên đã hoàn thành khoá FullStack và có việc làm</h2>
+            <h2>Feedback từ học viên đã hoàn thành khoá FullStack và có việc làm</h2>
             <Slider {...settings}>
                 {
                     feedbacks.map((feedback, index) => (

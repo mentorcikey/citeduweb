@@ -19,6 +19,31 @@ header {
     height: 100px;
 }
 
+header .header-button {
+    background-color: #1F409A;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    animation: pulse 0.5s infinite alternate;
+}
+
+header .header-button:hover {
+    cursor: pointer;
+    background-color: #0a41d7;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
 
 header.header-sticky {
     position: fixed;
@@ -35,6 +60,10 @@ header.header-sticky {
 
 header.header-sticky .mobile-menu-icon {
     color: #fff;
+}
+
+header.header-sticky .header-button {
+    background: #37C5F4;
 }
 
 header.header-sticky .header-logo img {
@@ -135,9 +164,13 @@ header .focus {
 
 @media screen and (max-width: 1024px) {
 
-    header .header-logo img {
-        width: 150px;
-        height: auto;
+    header .header-logo img,
+    header.header-sticky img {
+        display: none !important;
+    }
+
+    .mobile-menu-icon {
+        width: 70%;
     }
 
     header nav {
@@ -257,7 +290,15 @@ header .focus {
 }
 
 @media screen and (max-width: 768px) {
+
     header .header-text p {
         text-align: start;
     }
+
+    header .header-button {
+        width: 280px;
+        padding: 10px 0;
+        text-align: center;
+    }
+
 }

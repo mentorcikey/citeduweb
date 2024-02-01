@@ -10,8 +10,9 @@ import Home from './pages/home/Home.jsx';
 import AboutUs from './pages/aboutUs/AboutUs.jsx';
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
-import CoursePage from './pages/course/index.js';
+import CoursePage from './pages/course/Course.jsx';
 import ScrollToTop from "./components/ScrollToTop.js"
+import ContactPage from './pages/contact/Contact.jsx';
 
 const App = () => {
   const { scrollYProgress } = useScroll();
@@ -67,6 +68,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/course" element={<CoursePage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
     </div>

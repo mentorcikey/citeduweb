@@ -6,6 +6,8 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { MdVpnKey } from "react-icons/md";
+import { FaBookOpenReader } from "react-icons/fa6";
 
 import TrainingPhilosophyImage1 from "../../assets/images/trainingPhilosophyImage1.png"
 import TrainingPhilosophyImage2 from "../../assets/images/trainingPhilosophyImage2.png"
@@ -17,22 +19,26 @@ const trainingPhilosophy = [
     {
         imagePath: TrainingPhilosophyImage1,
         titlePhilosophy: "Bứt Phá",
-        contentPhilosophy: "Chương trình đào tạo của chúng tôi được thiết kế để đẩy lẻo học viên vào thế giới lập trình web fullstack. Sự tiến bộ được theo dõi và đánh giá để hỗ trợ từng học viên phát triển từng bước một."
+        icon: <MdVpnKey />,
+        contentPhilosophy: "Với lộ trình đào tạo được tinh gọn và được sắp xếp bài bản theo từng buổi học, từng module nhỏ sẽ giúp học viên tiếp thu kiến thức một cách thuận lợi và bứt phá khả năng coding của học viên tiến bộ từng ngày"
     },
     {
         imagePath: TrainingPhilosophyImage2,
         titlePhilosophy: "Học Đi Đôi với 'Hành'",
-        contentPhilosophy: "Sau khi hoàn thành, học viên không chỉ đạt đến trình độ lập trình mà còn có khả năng ứng dụng kiến thức vào xây dựng ứng dụng web thực tế. Họ trở nên tự tin trong việc giao tiếp với máy chủ, xử lý cơ sở dữ liệu, và triển khai ứng dụng của mình."
+        icon: <FaBookOpenReader />,
+        contentPhilosophy: "Đối với mảng lập trình thì chỉ học lý thuyết thôi là chưa đủ để học viên tiếp thu và hiểu hết được những kiến thức lý thuyết khô khan, chính vì thế mà trong chương trình đào tạo của CIT Education luôn luôn có những buổi thực hành, bài tập, dự án sau những buổi học lý thuyết để giúp học viên hiểu rõ được toàn bộ kiến thức được dạy"
     },
     {
         imagePath: TrainingPhilosophyImage3,
         titlePhilosophy: "Tự Học Chủ Động",
-        contentPhilosophy: "Chúng tôi khuyến khích học viên chủ động tìm kiếm và 'khai phá' kiến thức mới. Điều này giúp họ ghi nhớ kiến thức lâu dài và có khả năng áp dụng kiến thức vào các dự án thực tế."
+        icon: <MdVpnKey />,
+        contentPhilosophy: "Một trong những tính chất để trở thành lập trình viên xịn là phải có kỹ năng tự học, tự update kiến thức hàng ngày chính vì thế từ những ngày đầu đi học CIT Education đã định hướng cho học viên những kỹ năng trên để giúp con đường phát triển sự nghiệp trong ngành IT của học viên thuận lợi nhất"
     },
     {
         imagePath: TrainingPhilosophyImage4,
         titlePhilosophy: "Đồng Hành",
-        contentPhilosophy: "Chúng tôi không chỉ cung cấp khóa học, mà còn xây dựng cộng đồng hỗ trợ và chia sẻ. Học viên không chỉ học từ giáo viên mà còn từ sự tương tác và chia sẻ của cộng đồng. Cùng nhau, chúng ta xây dựng và phát triển sự nghiệp lập trình web fullstack."
+        icon: <MdVpnKey />,
+        contentPhilosophy: "Các giảng viên tại CIT Education không chỉ đồng hành cùng học viên trong thời gian đào tạo của khoá học mà học viên đăng ký tại trung tâm mà còn đồng hành với học viên cả khi học viên đi thực tập và đi làm, miễn là bất cứ khi nào học viên cần thì giảng viên tại CIT Education luôn sẵn lòng để hỗ trợ"
     }
 ];
 
@@ -54,7 +60,7 @@ function TrainingPhilosophy() {
 
     return (
         <section className='trainingPhilosophy-container'>
-            <h1>Triết lý đào tạo của CIT Education để hàng ngàn học viên có việc làm</h1>
+            <h1>Triết lý đào tạo của CIT Education để hàng trăm học viên có việc làm</h1>
             <div className='trainingPhilosophy-content'>
                 <div data-aos="fade-right" className='trainingPhilosophy-image'>
                     {trainingPhilosophy.map((item, index) => (
@@ -77,13 +83,20 @@ function TrainingPhilosophy() {
                             key={index}
                             expanded={index === activeIndex ? true : false}
                             onChange={() => handleAccordionOpen(index)}
+                            style={{
+                                boxShadow: activeIndex === index ? "1px 3px 10px rgba(0, 0, 0, 0.3)" : ""
+                            }}
                         >
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls={`"panel${index}-content"`}
                                 id={`"panel${index}-header"`}
+                                style={{
+                                    color: activeIndex === index ? "#1F409A" : "",
+                                }}
                             >
-                                {item.titlePhilosophy}
+                                <span>  {item.icon}</span>
+                                <span>  {item.titlePhilosophy}</span>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>{item.contentPhilosophy}</Typography>
