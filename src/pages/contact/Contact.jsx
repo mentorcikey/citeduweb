@@ -5,8 +5,6 @@ import emailjs from '@emailjs/browser';
 import { useForm } from "react-hook-form"
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useEffect } from 'react'
-import Aos from "aos"
 import "aos/dist/aos.css"
 import FrequentlyAskedQuestions from "../../components/course/FrequentlyAskedQuestions"
 
