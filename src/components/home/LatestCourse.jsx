@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { FaBookOpen } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { FaArrowRightToBracket } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 import "../../styles/home/latestCourse.css"
 import LastestCoursesImage1 from "../../assets/images/lastestCourses1.png"
@@ -15,13 +16,19 @@ const lastestCourses = [
     {
         nameCourse: 'Khoá học lập trình Web FullStack',
         imageUrl: LastestCoursesImage1,
+        courses: 120,
+        time: 192
     },
     {
         nameCourse: 'Khoá học lập trình Web Front-end',
         imageUrl: LastestCoursesImage2,
+        courses: 60,
+        time: 98
     }, {
         nameCourse: 'Khoá học lập trình Web Back-end',
         imageUrl: LastestCoursesImage3,
+        courses: 60,
+        time: 98
     }
 ];
 
@@ -62,9 +69,15 @@ const settings = {
 
 function LatestCourse() {
 
+    const navigate = useNavigate()
+
     useEffect(() => {
         Aos.init()
     })
+
+    const handleNavLink = () => {
+        navigate("/course")
+    }
 
     return (
         <section className='latestCourse-container'>
@@ -72,7 +85,7 @@ function LatestCourse() {
             <Slider {...settings} className='latestCourse-slider'>
                 {
                     lastestCourses.map((item, index) => (
-                        <div key={index} className='latestCourse-slide' data-aos="zoom-in">
+                        <div key={index} onClick={handleNavLink} className='latestCourse-slide' data-aos="zoom-in">
                             <div className='latestCourse-slide-img'>
                                 <img src={item.imageUrl} alt="Banner" />
                             </div>
@@ -82,11 +95,11 @@ function LatestCourse() {
                                 <div className='latestCourse-slide-courseInfo'>
                                     <div>
                                         <FaBookOpen />
-                                        <p>93 Bài học</p>
+                                        <p>{item.courses} Bài học</p>
                                     </div>
                                     <div>
                                         <IoMdTime />
-                                        <p>192 giờ</p>
+                                        <p>{item.time}giờ</p>
                                     </div>
                                 </div>
                             </div>

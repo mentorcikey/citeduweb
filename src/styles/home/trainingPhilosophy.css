@@ -20,12 +20,14 @@
 
 .trainingPhilosophy-container .trainingPhilosophy-image {
     width: 60%;
+    height: 100px;
 }
 
 .trainingPhilosophy-container .trainingPhilosophy-image img {
     width: 100%;
-    height: auto;
+    height: 500px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .trainingPhilosophy-container .trainingPhilosophy-accordion {

@@ -16,7 +16,13 @@
     list-style: none;
 }
 
-.footer-content li:hover {
+.footer-content li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-content li:hover,
+.footer-content li a:hover {
     cursor: pointer;
     color: #37C5F4;
 }

@@ -58,6 +58,10 @@
     flex-direction: column;
 }
 
+.consultation-form .form-lastChild {
+    margin-top: 30px;
+}
+
 .consultation-form form {
     height: 100%;
     display: flex;

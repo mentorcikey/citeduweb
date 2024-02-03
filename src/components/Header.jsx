@@ -11,6 +11,7 @@ import LogoCITEducation from "../assets/images/logo.png"
 import LogoCITEducationSticky from "../assets/images/logoSticky.png"
 import '../styles/home/header.css';
 import Backdrop from './home/Backdrop';
+import FormRegister from "./FormRegister"
 
 const Header = () => {
 
@@ -18,6 +19,7 @@ const Header = () => {
     const [showSidebar, setShowSidebar] = useState(false);
     const [router, setRouter] = useState("/");
     const [isHeaderSticky, setIsHeaderSticky] = useState(false);
+    const [showForm, setShowForm] = useState(true);
 
     const openSidebar = () => {
         setShowSidebar(true);
@@ -25,6 +27,10 @@ const Header = () => {
 
     const closeSidebar = () => {
         setShowSidebar(false);
+    }
+
+    const handleOpenForm = () => {
+        setShowForm(true)
     }
 
     useEffect(() => {
@@ -81,9 +87,9 @@ const Header = () => {
                             <div className="header-social-icon">
                                 <h2>Theo dõi chúng tôi</h2>
                                 <div>
-                                    <a href="#home"><img src={FacebookIcon} alt="FacebookIcon" /></a>
-                                    <a href="#home"><img src={TiktokIcon} alt="TiktokIcon" /></a>
-                                    <a href="#home"><img src={YoutubeIcon} alt="YoutubeIcon" /></a>
+                                    <a href="https://www.facebook.com/citeducation3105" target='blank'><img src={FacebookIcon} alt="FacebookIcon" /></a>
+                                    <a href="https://www.tiktok.com/@cit_education3105" target='blank'><img src={TiktokIcon} alt="TiktokIcon" /></a>
+                                    <a href="https://www.youtube.com/@citedu_digital_youtube" target='blank'><img src={YoutubeIcon} alt="YoutubeIcon" /></a>
                                 </div>
                             </div>
                             <div className="header-text">
@@ -101,9 +107,16 @@ const Header = () => {
                 <div className="mobile-menu-icon" onClick={openSidebar}>
                     <FaBars size={30} />
                 </div>
-                <a href="#consultationForm" className="header-button">Tư vấn lộ trình</a>
+                <p onClick={handleOpenForm} className="header-button">Tư vấn khoá học</p>
             </header>
             <Backdrop show={showSidebar} onClick={closeSidebar} />
+            <div className={showForm ? 'backdrop' : ""}>
+                <div className='form-register'>
+                    {
+                        showForm ? <FormRegister setShowForm={setShowForm} /> : ''
+                    }
+                </div>
+            </div>
         </>
     );
 }

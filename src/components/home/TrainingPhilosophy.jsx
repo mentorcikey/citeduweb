@@ -9,10 +9,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { MdVpnKey } from "react-icons/md";
 import { FaBookOpenReader } from "react-icons/fa6";
 
-import TrainingPhilosophyImage1 from "../../assets/images/trainingPhilosophyImage1.png"
-import TrainingPhilosophyImage2 from "../../assets/images/trainingPhilosophyImage2.png"
-import TrainingPhilosophyImage3 from "../../assets/images/trainingPhilosophyImage3.png"
-import TrainingPhilosophyImage4 from "../../assets/images/trainingPhilosophyImage4.png"
+import TrainingPhilosophyImage1 from "../../assets/images/trainingPhilosophyImage1.jpg"
+import TrainingPhilosophyImage2 from "../../assets/images/trainingPhilosophyImage2.jpg"
+import TrainingPhilosophyImage3 from "../../assets/images/trainingPhilosophyImage3.jpg"
+import TrainingPhilosophyImage4 from "../../assets/images/trainingPhilosophyImage4.jpg"
 import "../../styles/home/trainingPhilosophy.css"
 
 const trainingPhilosophy = [
@@ -20,7 +20,7 @@ const trainingPhilosophy = [
         imagePath: TrainingPhilosophyImage1,
         titlePhilosophy: "Bứt Phá",
         icon: <MdVpnKey />,
-        contentPhilosophy: "Với lộ trình đào tạo được tinh gọn và được sắp xếp bài bản theo từng buổi học, từng module nhỏ sẽ giúp học viên tiếp thu kiến thức một cách thuận lợi và bứt phá khả năng coding của học viên tiến bộ từng ngày"
+        contentPhilosophy: "Với lộ trình đào tạo được tinh gọn và được sắp xếp bài bản theo từng buổi học, từng module nhỏ sẽ giúp học viên tiếp thu kiến thức một cách thuận lợi và giúp khả năng coding của học viên tiến bộ từng ngày"
     },
     {
         imagePath: TrainingPhilosophyImage2,

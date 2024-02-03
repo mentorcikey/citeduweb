@@ -1,35 +1,42 @@
 import React from 'react';
-import '../styles/home/footer.css';
-
-import FacebookIcon from "../assets/images/icons8-facebook-48.png"
-import TiktokIcon from "../assets/images/icons8-tiktok-50.png"
-import YoutubeIcon from "../assets/images/icons8-youtube-48.png"
-
+import { useNavigate } from 'react-router-dom'
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+import '../styles/home/footer.css';
+import FacebookIcon from "../assets/images/icons8-facebook-48.png"
+import TiktokIcon from "../assets/images/icons8-tiktok-50.png"
+import YoutubeIcon from "../assets/images/icons8-youtube-48.png"
+
 const Footer = () => {
+
+    const navigate = useNavigate();
+
+    const handleNavLink = () => {
+        navigate("/course")
+    }
+
     return (
         <footer className="footer-container">
             <div className="footer-content">
                 <div className="footer-content-item1">
                     <p><FaPhoneAlt /><span>Điện thoại: 032962710</span></p>
-                    <p><MdEmail /><span>contact.citedu@gmail.com</span></p>
-                    <p><IoLocationSharp /><span>Số 18, KTT nhà hát chèo Việt Nam, 169 Doãn Kế Thiện, Mai Dịch, Cầu Giấy, Hà Nội</span></p>
+                    <p><MdEmail /><span>Email: contact.citedu@gmail.com</span></p>
+                    <p><IoLocationSharp /><span>Địa chỉ: Số 18, KTT nhà hát chèo Việt Nam, 169 Doãn Kế Thiện, Mai Dịch, Cầu Giấy, Hà Nội</span></p>
                 </div>
                 <div className="footer-content-item2">
                     <h1>Về CIT Education</h1>
                     <ul>
-                        <li>Về chúng tôi</li>
-                        <li>Tra cứu địa chỉ lớp OFF</li>
+                        <li onClick={() => navigate("/about-us")}>Về chúng tôi</li>
+                        <li><a href="https://maps.app.goo.gl/Z3QNYQCyeQm7Eutw9" target='blank'>Tra cứu địa chỉ lớp OFF</a></li>
                     </ul>
                 </div>
                 <div className="footer-content-item3">
                     <h1>Lộ trình học</h1>
                     <ul>
-                        <li>Dành cho người mới bắt đầu</li>
-                        <li>Dành cho người đã có nền tảng</li>
+                        <li onClick={handleNavLink}>Dành cho người mới bắt đầu</li>
+                        <li onClick={handleNavLink}>Dành cho người đã có nền tảng</li>
                     </ul>
                 </div>
                 <div className="footer-content-item4">
@@ -43,9 +50,9 @@ const Footer = () => {
                     <p>&copy; 2024 By CIT Education - All rights reserved.</p>
                 </div>
                 <ul className="footer-social-icon">
-                    <li><a href="#home"><img src={FacebookIcon} alt="FacebookIcon" /></a></li>
-                    <li><a href="#home"><img src={TiktokIcon} alt="TiktokIcon" /></a></li>
-                    <li><a href="#home"><img src={YoutubeIcon} alt="YoutubeIcon" /></a></li>
+                    <li><a href="https://www.facebook.com/citeducation3105" target='blank'><img src={FacebookIcon} alt="FacebookIcon" /></a></li>
+                    <li><a href="https://www.tiktok.com/@cit_education3105" target='blank'><img src={TiktokIcon} alt="TiktokIcon" /></a></li>
+                    <li><a href="https://www.youtube.com/@citedu_digital_youtube" target='blank'><img src={YoutubeIcon} alt="YoutubeIcon" /></a></li>
                 </ul>
             </div>
         </footer >

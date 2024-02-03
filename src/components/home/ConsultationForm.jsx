@@ -25,7 +25,11 @@ function ConsultationForm() {
         target: yup.string().oneOf(
             ['thuc-tap', 'doi-nganh', 'phuc-vu-dam-me', 'khac'],
             'Vui lòng chọn một mục tiêu học tập'
-        ).required('Vui lòng chọn mục tiêu học tập')
+        ).required('Vui lòng chọn mục tiêu học tập'),
+        course: yup.string().oneOf(
+            ['full-stack', 'front-end', 'back-end'],
+            'Vui lòng chọn một khoá học'
+        ).required('Vui lòng chọn khoá học ')
     });
 
     const {
@@ -44,6 +48,7 @@ function ConsultationForm() {
             phone: data.phone,
             object: data.object,
             target: data.target,
+            course: data.course,
             from_message: "học viên đăng kí từ trang web",
             message: "Giữ an toàn thông tin của khách hàng"
         }
@@ -110,7 +115,7 @@ function ConsultationForm() {
                             </div>
                             <div className='consultation-form-item'>
                                 <div className="form-group">
-                                    <label htmlFor="object">Bạn Là:</label>
+                                    <label htmlFor="object">Bạn Là</label>
                                     <select name="object" id="object"  {...register("object")} >
                                         <option>Chọn đối tượng</option>
                                         <option value="hoc-sinh-c2">Học sinh C2, C3</option>
@@ -133,6 +138,16 @@ function ConsultationForm() {
                                     </select>
                                     <p className='message-error'>{errors.target?.message}</p>
                                 </div>
+                            </div>
+                            <div className="form-group form-lastChild">
+                                <label htmlFor="course">Khoá học bạn đang quan tâm là</label>
+                                <select name="course" id="course" {...register("course")}>
+                                    <option>Chọn khoá học bạn quan tâm</option>
+                                    <option value="full-stack">Lập trình Web FullStack</option>
+                                    <option value="front-end">Lập trình Web Front-end</option>
+                                    <option value="back-end">Lập trình Web Back-end</option>
+                                </select>
+                                <p className='message-error'>{errors.course?.message}</p>
                             </div>
                         </div>
                         <button type="submit">Đặt hẹn</button>

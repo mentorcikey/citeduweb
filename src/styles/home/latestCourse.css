@@ -42,6 +42,7 @@
 .latestCourse-container .latestCourse-slider .latestCourse-slide:hover {
     transform: translateY(-10px);
     transition: all 0.3s linear;
+    cursor: pointer;
 }
 
 .latestCourse-container .latestCourse-slider .latestCourse-slide h1 {

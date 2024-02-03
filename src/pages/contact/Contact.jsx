@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 import { useForm } from "react-hook-form"
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import Aos from "aos"
 import "aos/dist/aos.css"
-import FrequentlyAskedQuestions from "../../components/course/FrequentlyAskedQuestions"
 
+import FrequentlyAskedQuestions from "../../components/course/FrequentlyAskedQuestions"
 import "./index.css"
 
 function ContactPage() {
@@ -65,20 +66,26 @@ function ContactPage() {
 
         reset()
     }
+
+    useEffect(() => {
+        Aos.init()
+    })
+
     return (
+
         <>
             <div className='contactPage-container'>
-                <h1>Liên hệ với chúng tôi</h1>
+                <h1 data-aos='fade-right'>Liên hệ với chúng tôi</h1>
                 <div className='contactPage-container-info'>
-                    <div className='contactPage-container-title'>
+                    <div data-aos='fade-right' className='contactPage-container-title'>
                         <h1>Văn phòng</h1>
                         <ul>
                             <li>Địa chỉ: Số nhà 18, KTT nhà hát chèo Việt Nam, Ngõ 169 Doãn Kế Thiện, Phường Mai Dịch, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam</li>
                             <li>Hotline: 032.962.1710</li>
-                            <li>contact.citedu@gmail.com</li>
+                            <li>Email: contact.citedu@gmail.com</li>
                         </ul>
                     </div>
-                    <form onSubmit={handleSubmit(onSubmit)} className='contactPage-container-form'>
+                    <form data-aos='fade-left' onSubmit={handleSubmit(onSubmit)} className='contactPage-container-form'>
                         <h1>Gửi tin nhắn</h1>
                         <div>
                             <div className="form-group">

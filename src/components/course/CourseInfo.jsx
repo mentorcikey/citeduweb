@@ -37,17 +37,17 @@ function CourseInfo() {
                     <hr />
                     <ul data-aos="fade-right">
                         <li>Những người đi làm hoặc sinh viên ngành khác (Non-IT) muốn chuyển sang học CNTT để làm về IT, trở thành lập trình viên chuyên nghiệp, có thể tham gia vào các dự án phần mềm tại các doanh nghiệp hoặc tự xây dựng ứng dụng phần mềm cho mình</li>
-                        <li>Sinh viên ngành CNTT hoặc các ngành khác muốn củng cố các kiến thức nền tảng về IT, phát triển tư duy lập trình, hiểu cấu trúc dữ liệu giải thuật, nắm chắc kiến thức từ cơ bản đến nâng cao về Java – một trong những công nghệ lập trình phổ biến được nhiều dự án phần mềm tại các công ty sử dụng</li>
-                        <li>Dành cho những ai yêu thích, đam mê và muốn tìm hiểu về lập trình, mong muốn trở thành lập trình viên Full Stack Java Web chuyên nghiệp – vị trí có mức lương cao thuộc top đầu trong thị trường việc làm IT</li>
+                        <li>Sinh viên ngành CNTT hoặc các ngành khác muốn củng cố các kiến thức nền tảng về IT, phát triển tư duy lập trình, hiểu cấu trúc dữ liệu giải thuật, nắm chắc kiến thức từ cơ bản đến nâng cao về JavaScript – một trong những công nghệ lập trình phổ biến được nhiều dự án phần mềm tại các công ty sử dụng</li>
+                        <li>Dành cho những ai yêu thích, đam mê và muốn tìm hiểu về lập trình, mong muốn trở thành lập trình viên Full Stack JavaScript Web chuyên nghiệp – vị trí có mức lương cao thuộc top đầu trong thị trường việc làm IT</li>
                     </ul>
                 </div>
                 <div className='courseInfo-why-joinCourse'>
                     <h1>Tại sao nên tham gia khoá học này?</h1>
                     <hr />
                     <ul data-aos="fade-right">
-                        <li>Những người đi làm hoặc sinh viên ngành khác (Non-IT) muốn chuyển sang học CNTT để làm về IT, trở thành lập trình viên chuyên nghiệp, có thể tham gia vào các dự án phần mềm tại các doanh nghiệp hoặc tự xây dựng ứng dụng phần mềm cho mình</li>
-                        <li>Sinh viên ngành CNTT hoặc các ngành khác muốn củng cố các kiến thức nền tảng về IT, phát triển tư duy lập trình, hiểu cấu trúc dữ liệu giải thuật, nắm chắc kiến thức từ cơ bản đến nâng cao về Java – một trong những công nghệ lập trình phổ biến được nhiều dự án phần mềm tại các công ty sử dụng</li>
-                        <li>Dành cho những ai yêu thích, đam mê và muốn tìm hiểu về lập trình, mong muốn trở thành lập trình viên Full Stack Java Web chuyên nghiệp – vị trí có mức lương cao thuộc top đầu trong thị trường việc làm IT</li>
+                        <li>Khoá học lập trình Web FullStack tại CIT Education với học phí chỉ bằng 1/2, 1/3 so với các trung tâm khác, bên cạnh đó còn hỗ trợ học viên chia nhỏ học phí lên đến 4 đợt và thời gian hoàn thành học phí lên đến nửa năm</li>
+                        <li>Lộ trình đào tạo của CIT Education được thiết kế từ cơ bản đến nâng cao, từ lý thuyết đến thực hành để bất kì đối tượng nào cũng có thể tham gia được khoá học này</li>
+                        <li>Học viên tại CIT Education được liên kết doanh nghiệp đi làm ngay sau khi hoàn thành khoá học</li>
                     </ul>
                 </div>
                 <div className='courseInfo-advantage'>

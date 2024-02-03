@@ -133,12 +133,15 @@
 
 .aboutUs-coreValues-content .aboutUs-coreValues-image {
     width: 60%;
+    height: 100%;
 }
 
 .aboutUs-coreValues-content .aboutUs-coreValues-image img {
     width: 100%;
-    height: auto;
+    height: 500px;
     border-radius: 10px;
+    object-fit: cover;
+    image-rendering: optimizeQuality;
 }
 
 .aboutUs-coreValues-content .aboutUs-coreValues-accordion {
@@ -223,9 +226,17 @@
     display: flex;
 }
 
-.aboutUs-outstandingMarks-content img {
+.aboutUs-outstandingMarks-content .aboutUs-outstandingMarks-image {
     width: 50%;
-    border-radius: 20px;
+    height: 100%;
+}
+
+.aboutUs-outstandingMarks-content .aboutUs-outstandingMarks-image img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    image-rendering: optimizeQuality;
 }
 
 .aboutUs-outstandingMarks-content .slick-dots {
@@ -338,6 +349,11 @@
 
     .aboutUs-outstandingMarks {
         padding: 0 5vw;
+        margin-bottom: 80px;
+    }
+
+    .aboutUs-outstandingMarks-content .aboutUs-outstandingMarks-image {
+        width: 100%;
     }
 
     .aboutUs-outstandingMarks .slick-initialized .slick-slide>div {
