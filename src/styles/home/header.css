@@ -59,7 +59,7 @@ header.header-sticky {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 99;
+    z-index: 100;
     padding: 0 5vw;
     background-color: #1F409A;
     transition: transform 0.5s ease, opacity 0.5s ease;
@@ -310,4 +310,9 @@ header .focus {
         text-align: center;
     }
 
+    .form-register {
+        overflow: scroll;
+        margin: 0;
+        padding: 30px;
+    }
 }
