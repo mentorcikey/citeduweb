@@ -89,9 +89,12 @@ function FormRegister(props) {
     })
 
     return (
-        <section id="consultationForm" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500" className='consultation-form-container'>
+        <section id="consultationForm" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500" className='consultation-form-container form-register'>
             <div style={{ position: "relative" }} className='consultation-form-content'>
-                <div onClick={() => setShowForm(false)} style={{
+                <div onClick={() => {
+                    setShowForm(false)
+                    document.body.style.overflow = 'auto'
+                }} style={{
                     position: "absolute",
                     top: "10px",
                     right: "20px",

@@ -23,7 +23,7 @@
   justify-content: center;
   align-content: center;
   gap: 20px;
-  z-index: 100;
+  z-index: 99;
 }
 
 .contact-container div {
@@ -58,7 +58,7 @@
   right: 27px;
   bottom: 20%;
   color: #000;
-  z-index: 10000;
+  z-index: 99;
 }
 
 .arrow-icon svg {

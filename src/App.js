@@ -19,9 +19,8 @@ const App = () => {
   const [isArrowIconSticky, setIsArrowIconSticky] = useState(false);
 
   const handleIconPhoneClick = () => {
-    window.location.href = `tel:${+84345298170}`;
+    window.location.href = `tel:${+84329621710}`;
   };
-
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

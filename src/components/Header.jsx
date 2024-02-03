@@ -19,7 +19,7 @@ const Header = () => {
     const [showSidebar, setShowSidebar] = useState(false);
     const [router, setRouter] = useState("/");
     const [isHeaderSticky, setIsHeaderSticky] = useState(false);
-    const [showForm, setShowForm] = useState(true);
+    const [showForm, setShowForm] = useState(false);
 
     const openSidebar = () => {
         setShowSidebar(true);
@@ -30,7 +30,8 @@ const Header = () => {
     }
 
     const handleOpenForm = () => {
-        setShowForm(true)
+        setShowForm(true);
+        document.body.style.overflow = 'hidden'
     }
 
     useEffect(() => {
@@ -111,11 +112,9 @@ const Header = () => {
             </header>
             <Backdrop show={showSidebar} onClick={closeSidebar} />
             <div className={showForm ? 'backdrop' : ""}>
-                <div className='form-register'>
-                    {
-                        showForm ? <FormRegister setShowForm={setShowForm} /> : ''
-                    }
-                </div>
+                {
+                    showForm ? <FormRegister setShowForm={setShowForm} /> : ''
+                }
             </div>
         </>
     );
