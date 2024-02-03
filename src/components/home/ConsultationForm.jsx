@@ -86,7 +86,7 @@ function ConsultationForm() {
     })
 
     return (
-        <section id="consultationForm" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500" className='consultation-form-container'>
+        <section id="consultationForm" data-aos="fade-up" className='consultation-form-container'>
             <div className='consultation-form-content'>
                 <div className='consultation-form-title'>
                     <h3>Đăng ký tư vấn miễn phí</h3>
