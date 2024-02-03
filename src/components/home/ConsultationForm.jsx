@@ -56,7 +56,7 @@ function ConsultationForm() {
         emailjs.send('service_245azxe', 'template_4kap7e8', value, 'UAJz1vNL2J3mPYYMJ')
             .then(() => {
                 toast.success('Đặt hẹn thành công', {
-                    position: "top-right",
+                    position: "bottom-right",
                     autoClose: 5000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -67,7 +67,7 @@ function ConsultationForm() {
                 });
             }, () => {
                 toast.error('Đặt hẹn thất bạt, vui lòng thử lại', {
-                    position: "top-right",
+                    position: "bottom-right",
                     autoClose: 5000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -155,7 +155,7 @@ function ConsultationForm() {
                 </div>
             </div>
             <ToastContainer
-                position="top-right"
+                position="bottom-right"
                 autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}

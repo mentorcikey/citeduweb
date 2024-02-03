@@ -111,7 +111,7 @@ const Header = () => {
                 <p onClick={handleOpenForm} className="header-button">Tư vấn khoá học</p>
             </header>
             <Backdrop show={showSidebar} onClick={closeSidebar} />
-            <div className={showForm ? 'backdrop' : ""}>
+            <div className={showForm ? 'backdropFormRegister' : ""}>
                 {
                     showForm ? <FormRegister setShowForm={setShowForm} /> : ''
                 }
