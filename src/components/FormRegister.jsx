@@ -6,9 +6,11 @@ import { useForm } from "react-hook-form"
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useEffect } from 'react'
-import Aos from "aos"
-import "aos/dist/aos.css"
 import { IoCloseSharp } from "react-icons/io5";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 import Logo from "../assets/images/image.png"
 import "../styles/home/consultationForm.css"
@@ -88,8 +90,8 @@ function FormRegister(props) {
         Aos.init()
     })
 
-    return (
-        <section id="consultationForm" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500" className='consultation-form-container form-register'>
+    return ( 
+        <section data-aos="fade-up" id="consultationForm" data-aos-easing="ease-out-cubic" data-aos-duration="1500" className='consultation-form-container form-register'>
             <div style={{ position: "relative" }} className='consultation-form-content'>
                 <div onClick={() => {
                     setShowForm(false)

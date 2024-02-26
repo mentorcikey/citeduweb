@@ -7,14 +7,20 @@ import CourseInfo from '../../components/course/CourseInfo'
 import CourseSlider from '../../components/course/CourseSilder'
 
 function CoursePage() {
+
+
+
     return (
-        <div className="course-container">
-            <CourseSlider />
-            <CourseInfo />
-            <ConsultationForm />
-            <FeedbackSlider />
-            <FrequentlyAskedQuestions />
-        </div>
+        <>
+            <div className="course-container">
+                <CourseSlider />
+                <CourseInfo />
+                <ConsultationForm />
+                <FeedbackSlider />
+                <FrequentlyAskedQuestions />
+            </div>
+        </>
+
     )
 }
 

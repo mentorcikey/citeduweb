@@ -264,6 +264,10 @@ header .focus {
         margin-bottom: 15px;
     }
 
+    header .header-social-icon div {
+        height: 50px;
+    }
+
     header .header-social-icon div a:nth-child(2),
     header .header-social-icon div a:nth-child(3) {
         margin-left: 20px;

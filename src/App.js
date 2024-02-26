@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { motion, useScroll } from "framer-motion";
 import { FaPhone } from 'react-icons/fa';
 import { IoIosArrowDropupCircle } from "react-icons/io";
+import CircularProgress from "@mui/material/CircularProgress"
 
 import "./App.css"
 import ZaloIcon from "./assets/images/zaloIcon.png"
@@ -17,6 +18,10 @@ import ContactPage from './pages/contact/Contact.jsx';
 const App = () => {
   const { scrollYProgress } = useScroll();
   const [isArrowIconSticky, setIsArrowIconSticky] = useState(false);
+  const [loading, setLoading] = useState(true)
+
+  const location = useLocation()
+
 
   const handleIconPhoneClick = () => {
     window.location.href = `tel:${+84329621710}`;
@@ -39,39 +44,58 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setLoading(true)
+
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+
+    return () => clearTimeout(timer)
+  }, [location.pathname])
+
   return (
-    <div className='container'>
+    <>
       {
-        isArrowIconSticky ?
-          <div onClick={scrollTop} className='arrow-icon'><IoIosArrowDropupCircle /></div> : ""
+        loading ? <CircularProgress sx={{ display: "block", margin: "25% auto" }} /> :
+          <div className='container'>
+            {
+              isArrowIconSticky ?
+                <div onClick={scrollTop} className='arrow-icon'><IoIosArrowDropupCircle /></div> : ""
+            }
+            <div className='contact-container'>
+              <div>
+                <FaPhone className="phone-icon" onClick={handleIconPhoneClick} />
+                <span>Gọi ngay</span>
+              </div>
+              <div>
+                <a href="https://zalo.me/3631761188736786993"><img className="zalo-icon" src={ZaloIcon} alt="ZaloIcon" /></a>
+                <span>Chat ngay</span>
+              </div>
+            </div>
+            <motion.div
+              className="progress-bar"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              style={{ scaleX: scrollYProgress }}
+            />
+            <ScrollToTop />
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/course" element={<CoursePage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+            <Footer />
+          </div>
       }
-      <div className='contact-container'>
-        <div>
-          <FaPhone className="phone-icon" onClick={handleIconPhoneClick} />
-          <span>Gọi ngay</span>
-        </div>
-        <div>
-          <a href="https://zalo.me/3631761188736786993"><img className="zalo-icon" src={ZaloIcon} alt="ZaloIcon" /></a>
-          <span>Chat ngay</span>
-        </div>
-      </div>
-      <motion.div
-        className="progress-bar"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        style={{ scaleX: scrollYProgress }}
-      />
-      <ScrollToTop />
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/course" element={<CoursePage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-      <Footer />
-    </div>
+    </>
   );
 }
 
 export default App;
+
+
+
+
